@@ -81,7 +81,7 @@ def get_user_session_history(session_id: str) -> List[types.Content]:
     return CHAT_SESSIONS[session_id]["history"]
 
 # 5. Initialize Gemini Client
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "AQ.Ab8RN6LBWEVcwfEt1XMwSgW4c61-2TbBlQAiJ9zKM_Ttfi63WA")
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 client = genai.Client(api_key=GEMINI_API_KEY) if GEMINI_API_KEY else None
 
 # 6. Pydantic Schemas for Structured AI Output
