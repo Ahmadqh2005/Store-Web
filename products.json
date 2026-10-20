@@ -1,519 +1,528 @@
 {
-    "store_name": "الكترونياتك",
-    "whatsapp": "962788600458",
-    "instagram": "elktronyatak",
-    "currency": "دينار",
-    "categories": [
-        {
-            "id": "boards",
-            "name": "لوحات التحكم الدقيقة (بوردات)",
-            "icon": "🔌"
-        },
-        {
-            "id": "sensors",
-            "name": "حساسات",
-            "icon": "📡"
-        },
-        {
-            "id": "motors",
-            "name": "محركات ومواتير",
-            "icon": "⚙️"
-        },
-        {
-            "id": "mods",
-            "name": "مودولات ودرايفرات",
-            "icon": "🧩"
-        },
-        {
-            "id": "wires",
-            "name": "أسلاك وتوصيل",
-            "icon": "🪢"
-        },
-        {
-            "id": "comps",
-            "name": "مكونات",
-            "icon": "💡"
-        },
-        {
-            "id": "power",
-            "name": "طاقة وبطاريات",
-            "icon": "🔋"
-        }
-    ],
-    "kits": [
-        {
-            "name": "سيارة روبوت",
-            "description": "بورد + درايفر + محركات + حساس مسافة",
-            "ids": [
-                "uno",
-                "l298n",
-                "tt",
-                "tt",
-                "hcsr04",
-                "jmf",
-                "h2x18650"
-            ]
-        },
-        {
-            "name": "سيارة تتبع خط",
-            "description": "بورد + درايفر + محركات + حساسين تتبع خط",
-            "ids": [
-                "uno",
-                "l298n",
-                "tt",
-                "tt",
-                "tcrt",
-                "tcrt",
-                "jmf",
-                "h2x18650"
-            ]
-        },
-        {
-            "name": "محطة طقس",
-            "description": "ESP32 + حساس حرارة ورطوبة",
-            "ids": [
-                "esp32",
-                "dht11",
-                "bb",
-                "jmm"
-            ]
-        },
-        {
-            "name": "ذراع روبوتية",
-            "description": "أردوينو + سيرفوهات",
-            "ids": [
-                "uno",
-                "servo9g",
-                "servo9g",
-                "servo9g",
-                "jmm",
-                "bb"
-            ]
-        }
-    ],
-    "items": [
-        {
-            "id": "uno",
-            "name": "Arduino Uno R3 ATmega328P (مع كابل)",
-            "category": "boards",
-            "price_jod": 4,
-            "in_stock": true,
-            "tags": "اردوينو يونو arduino uno atmega328p",
-            "description": "لوحة تطوير Uno R3 بشريحة ATmega328P، مع رأس دبابيس وكابل USB لمشاريع Arduino IDE. وحدة إلكترونية دقيقة وموثوقة."
-        },
-        {
-            "id": "nano",
-            "name": "Arduino Nano V3.0 (ATmega328P CH340G, USB-C)",
-            "category": "boards",
-            "price_jod": 4,
-            "in_stock": true,
-            "tags": "اردوينو نانو arduino nano ch340 type-c",
-            "description": "لوحة Nano V3.0 بشريحة ATmega328P وCH340G، 5V و16MHz، مع منفذ USB-C وكابل USB لـ Arduino IDE. تدعم PWM وSPI."
-        },
-        {
-            "id": "esp32",
-            "name": "ESP32 DevKitC (ESP32-WROOM-32D)",
-            "category": "boards",
-            "price_jod": 6.5,
-            "in_stock": true,
-            "tags": "اي اس بي esp32 wifi bluetooth واي فاي",
-            "description": "لوحة تطوير ESP32-DevKitC بوحدة ESP32-WROOM-32D (واي فاي وبلوتوث)، متوافقة مع Arduino."
-        },
-        {
-            "id": "tcrt",
-            "name": "حساس تتبع الخط TCRT5000 (Line Follower)",
-            "category": "sensors",
-            "price_jod": 1.25,
-            "in_stock": true,
-            "tags": "tcrt5000 tcrt 5000 tcrt-5000 line follower line tracking line tracker line sensor track sensor ir sensor infrared حساس خط حساس الخط حساس تتبع الخط حساس تتبع خط متابع الخط متابع خط متتبع الخط متتبع خط تتبع الخط تتبع خط تابع الخط سنسر خط سنسر لاين لاين فولور لاين فولو لاين تراكر اشعه تحت الحمراء انفرا ريد اي ار خط اسود سيارة تتبع خط روبوت ملحقات الروبوت",
-            "description": "مستشعر متابع الخط TCRT5000 من ملحقات الروبوت: يعمل بالأشعة تحت الحمراء ويميّز بين الخط الأسود والسطح الفاتح. مخرج رقمي D0 وتناظري A0 مع مقاوم متغيّر لضبط الحساسية. مناسب لسيارات تتبع الخط."
-        },
-        {
-            "id": "hcsr04",
-            "name": "حساس مسافة بالموجات فوق الصوتية HC-SR04 (Ultrasonic)",
-            "category": "sensors",
-            "price_jod": 1.5,
-            "in_stock": true,
-            "tags": "hc-sr04 hcsr04 hc sr04 hc-sr 04 sr04 sr-04 ultrasonic ultra sonic ultrasound distance sensor range finder حساس مسافة حساس المسافة حساس مسافه حساس المسافه مستشعر مسافة مستشعرات مسافة موجات فوق صوتية فوق الصوتيه الترا سونك اولتراسونك التراسونك سنسر مسافة قياس المسافة حساس عوائق تجنب العوائق سيارة تتفادى عوائق esp32 raspberry pi stm32",
-            "description": "مستشعر مسافة بالموجات فوق الصوتية HC-SR04 بأربعة أطراف (Vcc, Trig, Echo, Gnd). متوافق مع Arduino وESP32 وRaspberry Pi وSTM32. مناسب لقياس المسافة وتجنب العوائق."
-        },
-        {
-            "id": "dht11",
-            "name": "حساس حرارة ورطوبة DHT11",
-            "category": "sensors",
-            "price_jod": 2.25,
-            "in_stock": true,
-            "tags": "dht11 dht 11 dht-11 dht temperature humidity temp sensor humidity sensor حساس حرارة حساس الحرارة حساس حراره حساس رطوبة حساس الرطوبة حساس درجة الحرارة قياس درجة الحرارة والرطوبة مستشعر حرارة مستشعر رطوبة سنسر حرارة سنسر رطوبة ديجيتال محطة طقس طقس جو",
-            "description": "مستشعر DHT11 لقياس درجة الحرارة والرطوبة، على موديول بثلاثة أطراف (GND، DATA، +) ويأتي مع أسلاك توصيل. مناسب لمحطات الطقس ومشاريع التحكم بالمناخ."
-        },
-        {
-            "id": "l298n",
-            "name": "درايفر محركات L298N (Motor Driver)",
-            "category": "mods",
-            "price_jod": 2.25,
-            "in_stock": true,
-            "tags": "driver motor drive l298n h-bridge درايفر درايفر محركات درايفر موتور درايفر ماتور مودول تحكم بالمحركات سيارة",
-            "description": "وحدة تحكم بالمحركات L298N (H-Bridge): تشغل محركين DC أو محرك ستيبر وتتحكم بالاتجاه والسرعة. متوافقة مع Arduino UNO وMEGA، ومناسبة للسيارات الذكية وروبوتات DIY."
-        },
-        {
-            "id": "joy",
-            "name": "عصا تحكم جويستيك ثنائية المحور (Joystick Module)",
-            "category": "mods",
-            "price_jod": 1.2,
-            "in_stock": true,
-            "tags": "joystick joy stick joystic joysticks joy-stick ky-023 ky023 xy joystick ps2 joystick thumb joystick analog joystick جويستيك جوستيك جوي ستيك جويستك جوستك جويستيك عصا تحكم عصا التحكم عصى تحكم عصا تحكم ألعاب عصا العاب ذراع تحكم ذراع الالعاب ذراع العاب مقبض تحكم عصاية تحكم ريموت سيارة ريموت ذراع روبوتية ثنائية المحور محورين حساس عصا التحكم وحدة مكعبات بناء إلكترونية",
-            "description": "قطعة عصا تحكم (جويستيك) ثنائية المحور: حساس عصا التحكم للألعاب ووحدة بناء إلكترونية. أطراف الموديول GND و5V وRX وRY وSW (زر ضغط). مناسبة للتحكم بالسيارات والذراع الروبوتية والألعاب."
-        },
-        {
-            "id": "jmm",
-            "name": "أسلاك جمبر ذكر-ذكر 40 سلك – 30 سم (Jumper M-M)",
-            "category": "wires",
-            "price_jod": 1.2,
-            "in_stock": true,
-            "tags": "jumper male to male ذكر الى ذكر ذكر ذكر ذكر m-m جمبر jumper wire wires اسلاك سلك كيبل توصيل دوبونت dupont 40 قطعة 30 سم arduino esp32 raspberry",
-            "description": "40 قطعة أسلاك توصيل (جمبر) ذكر إلى ذكر بطول 30 سم، متوافقة مع ESP32 وRaspberry Pi وArduino."
-        },
-        {
-            "id": "jmf",
-            "name": "أسلاك جمبر ذكر-أنثى 40 سلك – 30 سم (Jumper M-F)",
-            "category": "wires",
-            "price_jod": 1.2,
-            "in_stock": true,
-            "tags": "jumper male to female ذكر الى انثى ذكر انثى m-f جمبر jumper wire wires اسلاك سلك كيبل توصيل دوبونت dupont 40 قطعة 30 سم arduino esp32 raspberry",
-            "description": "40 قطعة أسلاك توصيل (جمبر) ذكر إلى أنثى بطول 30 سم، متوافقة مع ESP32 وRaspberry Pi وArduino."
-        },
-        {
-            "id": "jff",
-            "name": "أسلاك جمبر أنثى-أنثى 40 سلك – 30 سم (Jumper F-F)",
-            "category": "wires",
-            "price_jod": 1.2,
-            "in_stock": true,
-            "tags": "jumper female to female انثى الى انثى انثى انثى f-f جمبر jumper wire wires اسلاك سلك كيبل توصيل دوبونت dupont 40 قطعة 30 سم arduino esp32 raspberry",
-            "description": "40 قطعة أسلاك توصيل (جمبر) أنثى إلى أنثى بطول 30 سم، متوافقة مع ESP32 وRaspberry Pi وArduino."
-        },
-        {
-            "id": "bb",
-            "name": "بردبورد 400 نقطة (Breadboard)",
-            "category": "wires",
-            "price_jod": 1.25,
-            "in_stock": true,
-            "tags": "breadboard bread board بردبورد بريدبورد لوحة تجارب لوحه تجارب 400 نقطة بدون لحام",
-            "description": "بردبورد (لوحة تجارب) بـ 400 نقطة توصيل، لبناء الدوائر وتجربتها بدون لحام. مناسب لمشاريع Arduino وESP32 والدوائر الإلكترونية."
-        },
-        {
-            "id": "h1x18650",
-            "name": "حامل بطارية 1 خلية مع أسلاك – 3.7V (Battery Holder 1×18650)",
-            "category": "power",
-            "price_jod": 0.4,
-            "in_stock": true,
-            "tags": "holder battery holder 18650 1 cell single حامل بطارية حامل بطاريه حامل بطارية خلية واحدة 1 خلية حامل 18650 بطارية ليثيوم ليثيوم ايون li-ion 3.7v 3.7 فولت اسلاك سلك",
-            "description": "حامل بطارية لخلية واحدة مناسب لبطارية ليثيوم 18650 بجهد 3.7V، مع سلكين أحمر (+) وأسود (−) جاهزين للتوصيل. الحامل لا يحتوي على دائرة شحن أو حماية."
-        },
-        {
-            "id": "h2x18650",
-            "name": "حامل بطارية 2 خلية مع أسلاك (Battery Holder 2×18650)",
-            "category": "power",
-            "price_jod": 0.9,
-            "in_stock": true,
-            "tags": "holder battery holder 18650 2 cell double حامل بطارية حامل بطاريه حامل بطاريتين 2 خلية خليتين حامل 18650 بطارية ليثيوم ليثيوم ايون li-ion 7.4v اسلاك سلك سيارة روبوت",
-            "description": "حامل بطارية لخليتين مناسب لبطاريات ليثيوم 18650، مع سلكين أحمر (+) وأسود (−) جاهزين للتوصيل. مناسب لمشاريع السيارات والروبوتات. الحامل لا يحتوي على دائرة شحن أو حماية."
-        },
-        {
-            "id": "h3x18650",
-            "name": "حامل بطارية 3 خلايا مع أسلاك (Battery Holder 3×18650)",
-            "category": "power",
-            "price_jod": 1.1,
-            "in_stock": true,
-            "tags": "holder battery holder 18650 3 cell حامل بطارية حامل بطاريه 3 خلايا ثلاث خلايا ثلاثة حامل 18650 بطارية ليثيوم ليثيوم ايون li-ion 11.1v اسلاك سلك",
-            "description": "حامل بطارية لثلاث خلايا مناسب لبطاريات ليثيوم 18650، مع سلكين أحمر (+) وأسود (−) جاهزين للتوصيل. الحامل لا يحتوي على دائرة شحن أو حماية."
-        },
-        {
-            "id": "h4x18650",
-            "name": "حامل بطارية 4 خلايا مع أسلاك (Battery Holder 4×18650)",
-            "category": "power",
-            "price_jod": 1.25,
-            "in_stock": true,
-            "tags": "holder battery holder 18650 4 cell حامل بطارية حامل بطاريه 4 خلايا اربع خلايا اربعة حامل 18650 بطارية ليثيوم ليثيوم ايون li-ion 14.8v اسلاك سلك",
-            "description": "حامل بطارية لأربع خلايا مناسب لبطاريات ليثيوم 18650، مع سلكين أحمر (+) وأسود (−) جاهزين للتوصيل. الحامل لا يحتوي على دائرة شحن أو حماية."
-        },
-        {
-            "id": "clip9v",
-            "name": "سلك مشبك بطارية 9V – 15 سم (9V Battery Clip)",
-            "category": "power",
-            "price_jod": 0.25,
-            "in_stock": true,
-            "tags": "9v battery clip connector snap 9 volt مشبك بطارية مشبك بطاريه مشبك 9 فولت سلك مشبك بطارية بطارية 9 فولت 9v كليب كونيكتور موصل بطارية 9v حامل بطارية 9 فولت اسلاك",
-            "description": "مشبك بطارية 9V مع سلكين بطول 15 سم: أحمر (+) وأسود (−)، طرفا الأسلاك جاهزان للتوصيل على البردبورد أو المشاريع."
-        },
-        {
-            "id": "clip9v10",
-            "name": "مشابك بطارية 9V – 10 قطع، أسلاك 15 سم (9V Battery Clip ×10)",
-            "category": "power",
-            "price_jod": 2.0,
-            "in_stock": true,
-            "tags": "9v battery clip connector snap 9 volt 10 pcs مشبك بطارية مشابك بطارية مشبك بطاريه 10 قطع 10 حبات عشر قطع 9 فولت سلك مشبك بطارية بطارية 9 فولت كليب كونيكتور موصل بطارية 9v حامل بطارية 9 فولت اسلاك جملة",
-            "description": "طقم 10 قطع مشابك بطارية 9V، كل مشبك بسلكين بطول 15 سم: أحمر (+) وأسود (−)، طرفا الأسلاك جاهزان للتوصيل. مناسب للمشاريع الكثيرة أو الورش."
-        },
-        {
-            "id": "servo9g",
-            "name": "سيرفو ميكرو 9G ديجيتال (Servo Motor)",
-            "category": "motors",
-            "price_jod": 3.25,
-            "in_stock": true,
-            "tags": "servo سيرفو سيرفو موتور سيرفو ماتور محرك سيرفو ماطور 9g sg90 micro digital ميكرو ديجيتال ذراع روبوت motor",
-            "description": "سيرفو ميكرو رقمي (ديجيتال) 9G بتروس معدنية للتحكم الدقيق بالزاوية. مناسب للروبوتات والذراع الروبوتية والسيارات والقوارب والطائرات التي تعمل بالتحكم عن بعد."
-        },
-        {
-            "id": "stepper",
-            "name": "محرك ستيبر 5V مع درايفر ULN2003 (Stepper Motor)",
-            "category": "motors",
-            "price_jod": 3,
-            "in_stock": true,
-            "tags": "stepper ستيبر ستيبير ستيبر موتور ستيبر ماتور محرك ستيبر محرك خطوي تدريجي 28byj-48 uln2003 motor",
-            "description": "طقم محرك ستيبر (خطوي) 5V مع لوحة قيادة ULN2003، متوافق مع Arduino. مناسب للحركة الدقيقة والمشاريع التعليمية."
-        },
-        {
-            "id": "tt",
-            "name": "محرك TT مع علبة تروس 3-6V (DC Gear Motor)",
-            "category": "motors",
-            "price_jod": 1.5,
-            "in_stock": true,
-            "tags": "tt motor dc gear محرك tt محرك تي تي ماتور tt موتور tt ماتور اصفر محرك اصفر دي سي تروس عجل سيارة روبوت",
-            "description": "محرك TT ثنائي العمود (DC) مع علبة تروس، يعمل على 3–6V بسرعة 200 دورة بالدقيقة ونسبة تروس 1:48، مع سلكين جاهزين للتوصيل. مناسب لسيارات الروبوت الذكية وArduino."
-        },
-        {
-            "id": "n20",
-            "name": "محرك تروس معدني N20 (3-6V)",
-            "category": "motors",
-            "price_jod": 5,
-            "in_stock": true,
-            "tags": "n20 gear motor محرك تروس معدني محرك تروس ماتور تروس معدن موتور تروس مايكرو ميكرو دي سي dc عجل روبوت motor",
-            "description": "محرك مصغر N20 بتيار مستمر 3–6V مع علبة تروس معدنية كاملة وعمود D بقطر 3 مم، عزم عالٍ. متوفر بسرعتين 100 أو 200 دورة بالدقيقة (حدد السرعة عند الطلب). مناسب لعجلات الروبوت والسيارات الصغيرة."
-        },
-        {
-            "id": "coreless716",
-            "name": "محرك كوربلس 716 صغير 7×16 مم (Coreless Motor)",
-            "category": "motors",
-            "price_jod": 2.2,
-            "in_stock": true,
-            "tags": "coreless كوربلس كورلس كور لس 716 7x16 7*16 7×16 micro motor dc محرك صغير محرك ميكرو موتور صغير ماتور صغير ماطور صغير مايكرو ميني mini درون صغير ميني درون mini drone quadcopter كوادكوبتر طيارة طائرة هليكوبتر مروحة بروبلر propeller 3.7v ليبو lipo hubsan syma 1.25mm محرك عالي السرعة بدون قلب هواة نماذج اهتزاز اهتزازي vibration motor",
-            "description": "محرك صغير بكوب مجوف (Coreless) مقاس 7×16 مم، عالي السرعة وخفيف الوزن، مع كيبل وكونيكتور 1.25 مم جاهز للتوصيل. الأشهر لطائرات الدرون الصغيرة (ميني درون) ونماذج الطائرات والهوايات، ويصلح كمحرك اهتزاز للأعمال اليدوية."
-        },
-        {
-            "id": "a2208-2600kv",
-            "name": "محرك درون A2208 2600KV + عدة تثبيت (Brushless Motor)",
-            "category": "motors",
-            "price_jod": 11,
-            "in_stock": true,
-            "tags": "a2208 2208 2600kv 2600 kv كيلو فولت brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات محرك درون موتور درون ماتور درون ماطور درون محرك بدون فرش موتور بدون فرش ماتور بدون فرش drone fpv rc طيارة طائرة كوادكوبتر quadcopter طائرة رياضية طائرة تحكم عن بعد عدة تثبيت قاعدة تثبيت mount motor",
-            "description": "محرك بدون فرش (Brushless) موديل A2208 بسرعة 2600KV مع عدة التثبيت. مناسب لطائرات الدرون والطائرات الرياضية والتحكم عن بعد (RC FPV). يحتاج متحكم سرعة ESC مناسب (مثل ESC 40A) يُباع بشكل منفصل."
-        },
-        {
-            "id": "esc40a",
-            "name": "متحكم ESC 40A للمحرك بدون فرش (Brushless ESC)",
-            "category": "motors",
-            "price_jod": 10,
-            "in_stock": true,
-            "tags": "esc 40a 40 امبير اي اس سي ايسي speed controller سبيد كنترولر كنترولر متحكم متحكم سرعة متحكم سرعه دارة تحكم بالمحرك تحكم بسرعة المحرك مظبط سرعة brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات درون drone fpv rc طيارة طائرة كوادكوبتر quadcopter a2208 2600kv",
-            "description": "متحكم سرعة إلكتروني (ESC) بقدرة 40 أمبير للمحركات بدون فرش، لطائرات RC وFPV. يتوافق مع محرك A2208 2600KV (يُباع بشكل منفصل)."
-        },
-        {
-            "id": "xxd930kv",
-            "name": "محرك درون XXD 930KV بدون فرش (Brushless Motor)",
-            "category": "motors",
-            "price_jod": 8,
-            "in_stock": true,
-            "tags": "xxd 930kv 930 kv a2212 2212 brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات محرك درون موتور درون ماتور درون ماطور درون محرك بدون فرش موتور بدون فرش ماتور بدون فرش drone fpv rc طيارة طائرة كوادكوبتر quadcopter طائرة تحكم عن بعد motor",
-            "description": "محرك بدون فرش (Brushless) XXD بسرعة 930KV مع عدة التثبيت (قاعدة + محول مروحة + براغي) كما بالصورة، لطائرات الدرون وطائرات RC FPV. يحتاج متحكم سرعة ESC مناسب (مثل ESC 30A) يُباع بشكل منفصل."
-        },
-        {
-            "id": "esc30a",
-            "name": "متحكم ESC 30A للمحرك بدون فرش (Brushless ESC)",
-            "category": "motors",
-            "price_jod": 8,
-            "in_stock": true,
-            "tags": "esc 30a 30 امبير اي اس سي ايسي speed controller سبيد كنترولر كنترولر متحكم متحكم سرعة متحكم سرعه دارة تحكم بالمحرك تحكم بسرعة المحرك مظبط سرعة brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات درون drone fpv rc طيارة طائرة كوادكوبتر quadcopter xxd 930kv",
-            "description": "متحكم سرعة إلكتروني (ESC) بقدرة 30 أمبير للمحركات بدون فرش، لطائرات RC وFPV. يتوافق مع محرك XXD 930KV (يُباع بشكل منفصل)."
-        },
-        {
-            "id": "drone-a2208-esc40",
-            "name": "طقم درون A2208 2600KV + ESC 40A (محرك مع متحكم)",
-            "category": "motors",
-            "price_jod": 21,
-            "in_stock": true,
-            "tags": "طقم كيت kit set a2208 2208 2600kv esc 40a 40 امبير محرك مع متحكم محرك ومتحكم موتور ومتحكم ماتور مع كنترولر محرك درون موتور درون ماتور درون ماطور درون brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات speed controller سبيد كنترولر اي اس سي ايسي drone fpv rc طيارة طائرة كوادكوبتر quadcopter عدة تثبيت motor",
-            "description": "طقم كامل: محرك بدون فرش A2208 2600KV مع عدة التثبيت + متحكم سرعة ESC 40A، جاهز لطائرات الدرون وRC FPV."
-        },
-        {
-            "id": "drone-xxd930-esc30",
-            "name": "طقم درون XXD 930KV + ESC 30A (محرك مع متحكم)",
-            "category": "motors",
-            "price_jod": 16,
-            "in_stock": true,
-            "tags": "طقم كيت kit set xxd 930kv 930 a2212 2212 esc 30a 30 امبير محرك مع متحكم محرك ومتحكم موتور ومتحكم ماتور مع كنترولر محرك درون موتور درون ماتور درون ماطور درون brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات speed controller سبيد كنترولر اي اس سي ايسي drone fpv rc طيارة طائرة كوادكوبتر quadcopter عدة تثبيت motor",
-            "description": "طقم كامل: محرك بدون فرش XXD 930KV مع عدة التثبيت + متحكم سرعة ESC 30A، جاهز لطائرات الدرون وRC FPV."
-        },
-        {
-            "id": "brl1503x4",
-            "name": "طقم 4 محركات درون 1503 2750KV بدون فرش + 4 مراوح (Brushless Motor ×4)",
-            "category": "motors",
-            "price_jod": 10,
-            "in_stock": true,
-            "tags": "طقم كيت kit set 4 اربع 4 قطع brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات محرك درون موتور درون ماتور درون ماطور درون محرك بدون فرش موتور بدون فرش ماتور بدون فرش 1503 2750kv 2750 kv drone fpv rc طيارة طائرة كوادكوبتر quadcopter سباق freestyle فري ستايل مروحة مراوح بروبلر propeller motor",
-            "description": "طقم 4 محركات بدون فرش (Brushless) موديل 1503 بسرعة 2750KV مع 4 مراوح ومسامير التثبيت. مناسب لطائرات الدرون FPV للسباق والطيران الحر، والكوادكوبتر، والتركيب الذاتي للطائرات الصغيرة. يحتاج 4 متحكمات ESC (تُباع بشكل منفصل)."
-        },
-        {
-            "id": "brl1503",
-            "name": "محرك درون 1503 2750KV بدون فرش (Brushless Motor)",
-            "category": "motors",
-            "price_jod": 3,
-            "in_stock": true,
-            "tags": "قطعة واحدة 1 حبة brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات محرك درون موتور درون ماتور درون ماطور درون محرك بدون فرش موتور بدون فرش ماتور بدون فرش 1503 2750kv 2750 kv drone fpv rc طيارة طائرة كوادكوبتر quadcopter سباق freestyle فري ستايل مروحة مراوح بروبلر propeller motor",
-            "description": "محرك بدون فرش (Brushless) موديل 1503 بسرعة 2750KV لطائرات الدرون FPV الصغيرة والكوادكوبتر وطائرات التحكم عن بعد. السعر للمحرك الواحد مع مروحة ومسامير تثبيت، وإذا بدك طقم 4 محركات مع المراوح فهو متوفر بسعر أوفر. يحتاج ESC (يُباع بشكل منفصل)."
-        },
-        {
-            "id": "tft",
-            "name": "شاشة TFT ملونة 2.0 إنش ST7789V (240×320)",
-            "category": "mods",
-            "price_jod": 5,
-            "in_stock": true,
-            "tags": "شاشة tft oled lcd st7789 st7789v display اوليد ملونة 2 انش 2.0 spi شاشة عرض",
-            "description": "شاشة TFT ملونة بقياس 5.08 سم (2.0 إنش) ودقة 240×320 بكسل (RGB)، مع دائرة تحكم ST7789V. متوافقة مع Arduino وRaspberry Pi وESP32 وSTM32."
-        },
-        {
-            "id": "esp32exp",
-            "name": "لوحة توسيع ESP32 – 38 Pin (Expansion Board)",
-            "category": "mods",
-            "price_jod": 3,
-            "in_stock": true,
-            "tags": "esp32 expansion board لوحة توسيع توزيع esp32s devkitc 38 pin shield شيلد قاعدة",
-            "description": "لوحة توسيع (توزيع) لبورد ESP32 بـ 38 دبوس (ESP32S / DevKitC): تفرد كل الدبابيس بسهولة، ومعها منفذا Micro USB وType-C. مناسبة للمشاريع المدمجة ولوحات التطوير اللاسلكية والروبوتات."
-        },
-        {
-            "id": "solar45",
-            "name": "لوح طاقة شمسية 4.5V (Solar Panel)",
-            "category": "mods",
-            "price_jod": 1.5,
-            "in_stock": true,
-            "tags": "solar panel لوح خلية شمسية طاقة شمسيه 4.5v شحن شمسي كهروضوئي",
-            "description": "لوح طاقة شمسية صغير بجهد 4.5 فولت، لوح شحن شمسي كهروضوئي (Photovoltaic) للمشاريع الصغيرة."
-        },
-        {
-            "id": "relay",
-            "name": "مودول ريلاي 5V قناة واحدة مع عزل OPTO",
-            "category": "mods",
-            "price_jod": 1.25,
-            "in_stock": true,
-            "tags": "relay ريلاي ريليه مرحل 5v opto optocoupler مفتاح مستوى عالي منخفض",
-            "description": "مودول ريلاي (مرحل) 5 فولت بقناة واحدة مع عزل OPTO ومفتاح اختيار مستوى التشغيل (عالي/منخفض). متوافق مع Arduino وRaspberry Pi وARM وAVR."
-        },
-        {
-            "id": "buzzer",
-            "name": "بازر صفارة (Buzzer)",
-            "category": "mods",
-            "price_jod": 0.4,
-            "in_stock": true,
-            "tags": "buzzer بازر جرس صفارة انذار passive buzzer سماعة صغيرة",
-            "description": "وحدة بازر (صفارة) سلبية، مناسبة للروبوتات وأنظمة الإنذار. متوافقة مع Arduino وRaspberry Pi والمتحكمات الدقيقة."
-        },
-        {
-            "id": "d4007",
-            "name": "ديود 1N4007 (Rectifier Diode 1A 1000V)",
-            "category": "comps",
-            "price_jod": 0.05,
-            "in_stock": true,
-            "tags": "1n4007 4007 ديود ديودات دايود diode rectifier تقويم 1a 1000v",
-            "description": "ديود تقويم 1N4007 (1 أمبير – 1000 فولت): الأشهر لتقويم التيار المتردد AC إلى DC، ولحماية الدوائر من عكس القطبية، ولحماية الترانزستور من تيار الملفات (ريلاي/موتور). الشريط الفضي = الكاثود."
-        },
-        {
-            "id": "d4148",
-            "name": "ديود 1N4148 (Signal Diode سريع صغير)",
-            "category": "comps",
-            "price_jod": 0.05,
-            "in_stock": true,
-            "tags": "1n4148 4148 ديود ديودات دايود diode signal اشارة سريع زجاجي صغير",
-            "description": "ديود إشارات سريع زجاجي (100 فولت – حتى 200 ملي أمبير): للدوائر الرقمية والإشارات وحماية أطراف المتحكم. مش مناسب للتيارات الكبيرة."
-        },
-        {
-            "id": "fr107",
-            "name": "ديود FR107 (Fast Recovery 1A 1000V)",
-            "category": "comps",
-            "price_jod": 0.05,
-            "in_stock": true,
-            "tags": "fr107 ديود ديودات دايود diode fast recovery سريع استعادة سريعة smps 1a 1000v",
-            "description": "ديود استعادة سريعة (1 أمبير – 1000 فولت): مناسب لمصادر الطاقة SMPS والدوائر عالية التردد حيث ديود 1N4007 يكون بطيء."
-        },
-        {
-            "id": "d5408",
-            "name": "ديود 1N5408 (Rectifier Diode 3A 3 امبير 1000V)",
-            "category": "comps",
-            "price_jod": 0.05,
-            "in_stock": true,
-            "tags": "1n5408 5408 ديود ديودات دايود diode rectifier تقويم 3a 3 امبير 1000v",
-            "description": "ديود تقويم قوي (3 أمبير – 1000 فولت): للمقومات والشواحن والأحمال اللي تحتاج تيار أكبر من 1N4007."
-        },
-        {
-            "id": "d5822",
-            "name": "ديود شوتكي 1N5822 (Schottky Diode 3A 40V)",
-            "category": "comps",
-            "price_jod": 0.05,
-            "in_stock": true,
-            "tags": "1n5822 5822 شوتكي schottky ديود ديودات دايود diode 3a 3 امبير 40v شمسي",
-            "description": "ديود شوتكي (3 أمبير – 40 فولت): هبوط جهد قليل وسرعة عالية، مناسب لمحولات DC-DC وحماية عكس القطبية والشحن بالألواح الشمسية."
-        },
-        {
-            "id": "d5819",
-            "name": "ديود شوتكي 1N5819 (Schottky Diode 1A 40V)",
-            "category": "comps",
-            "price_jod": 0.05,
-            "in_stock": true,
-            "tags": "1n5819 5819 شوتكي schottky ديود ديودات دايود diode 1a 1 امبير 40v شمسي",
-            "description": "ديود شوتكي (1 أمبير – 40 فولت): هبوط جهد قليل، ممتاز لحماية عكس القطبية ودوائر البطاريات والشحن الشمسي والتيارات الصغيرة."
-        },
-        {
-            "id": "d5399",
-            "name": "ديود 1N5399 (Rectifier Diode 1.5A 1000V)",
-            "category": "comps",
-            "price_jod": 0.05,
-            "in_stock": true,
-            "tags": "1n5399 5399 ديود ديودات دايود diode rectifier تقويم 1.5a 1000v",
-            "description": "ديود تقويم (1.5 أمبير – 1000 فولت): خيار وسط بين 1N4007 و1N5408 لدوائر التقويم والتغذية."
-        },
-        {
-            "id": "fr207",
-            "name": "ديود FR207 (Fast Recovery 2A 1000V)",
-            "category": "comps",
-            "price_jod": 0.05,
-            "in_stock": true,
-            "tags": "fr207 ديود ديودات دايود diode fast recovery سريع استعادة سريعة smps 2a 2 امبير 1000v",
-            "description": "ديود استعادة سريعة (2 أمبير – 1000 فولت): لمصادر الطاقة SMPS والمحولات والدوائر عالية التردد."
-        },
-        {
-            "id": "dkit",
-            "name": "مجموعة ديودات متنوعة (8 أنواع × 5 حبات = 40 ديود)",
-            "category": "comps",
-            "price_jod": 1.7,
-            "in_stock": true,
-            "tags": "مجموعة طقم ديودات diodes kit set ديود ديودات دايود شوتكي",
-            "description": "40 ديود: 5 حبات من كل نوع — 1N4007، 1N4148، FR107، 1N5408، 1N5822، 1N5819، 1N5399، FR207. أوفر من شرائها منفردة (2.00 دينار)."
-        },
-        {
-            "id": "res25",
-            "name": "مقاومة 220 أوم 1/4 واط (25 حبة) – Resistor 220Ω",
-            "category": "comps",
-            "price_jod": 0.7,
-            "in_stock": true,
-            "tags": "مقاومة مقاومه مقاومات resistor resistors 220 220r 220ohm 220 اوم اوم ohm 1/4w ربع واط 5% كربونية carbon led ليد 25 حبة مجموعة",
-            "description": "25 مقاومة كربونية 220Ω (220R) بقدرة 1/4 واط وسماحية 5%. الأشهر لتحديد تيار الـLED ولمشاريع الإلكترونيات والتجارب. السعر للمجموعة كاملة (25 حبة)."
-        },
-        {
-            "id": "res1",
-            "name": "مقاومة 220 أوم 1/4 واط (حبة واحدة) – Resistor 220Ω",
-            "category": "comps",
-            "price_jod": 0.04,
-            "in_stock": true,
-            "tags": "مقاومة مقاومه مقاومات resistor resistors 220 220r 220ohm 220 اوم اوم ohm 1/4w ربع واط 5% كربونية carbon led ليد حبة وحدة مفرد",
-            "description": "مقاومة كربونية 220Ω (220R) بقدرة 1/4 واط وسماحية 5%. الأشهر لتحديد تيار الـLED ولمشاريع الإلكترونيات والتجارب. السعر للحبة الواحدة."
-        }
-    ]
+  "store_name": "الكترونياتك",
+  "whatsapp": "962788600458",
+  "instagram": "elktronyatak",
+  "currency": "دينار",
+  "categories": [
+    {
+      "id": "boards",
+      "name": "لوحات التحكم الدقيقة (بوردات)",
+      "icon": "🔌"
+    },
+    {
+      "id": "sensors",
+      "name": "حساسات",
+      "icon": "📡"
+    },
+    {
+      "id": "motors",
+      "name": "محركات ومواتير",
+      "icon": "⚙️"
+    },
+    {
+      "id": "mods",
+      "name": "مودولات ودرايفرات",
+      "icon": "🧩"
+    },
+    {
+      "id": "wires",
+      "name": "أسلاك وتوصيل",
+      "icon": "🪢"
+    },
+    {
+      "id": "comps",
+      "name": "مكونات",
+      "icon": "💡"
+    },
+    {
+      "id": "power",
+      "name": "طاقة وبطاريات",
+      "icon": "🔋"
+    }
+  ],
+  "kits": [
+    {
+      "name": "سيارة روبوت",
+      "description": "بورد + درايفر + محركات + حساس مسافة",
+      "ids": [
+        "uno",
+        "l298n",
+        "tt",
+        "tt",
+        "hcsr04",
+        "jmf",
+        "h2x18650"
+      ]
+    },
+    {
+      "name": "سيارة تتبع خط",
+      "description": "بورد + درايفر + محركات + حساسين تتبع خط",
+      "ids": [
+        "uno",
+        "l298n",
+        "tt",
+        "tt",
+        "tcrt",
+        "tcrt",
+        "jmf",
+        "h2x18650"
+      ]
+    },
+    {
+      "name": "محطة طقس",
+      "description": "ESP32 + حساس حرارة ورطوبة",
+      "ids": [
+        "esp32",
+        "dht11",
+        "bb",
+        "jmm"
+      ]
+    },
+    {
+      "name": "ذراع روبوتية",
+      "description": "أردوينو + سيرفوهات",
+      "ids": [
+        "uno",
+        "servo9g",
+        "servo9g",
+        "servo9g",
+        "jmm",
+        "bb"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "uno",
+      "name": "Arduino Uno R3 ATmega328P (مع كابل)",
+      "category": "boards",
+      "price_jod": 4,
+      "in_stock": true,
+      "tags": "اردوينو يونو arduino uno atmega328p",
+      "description": "لوحة تطوير Uno R3 بشريحة ATmega328P، مع رأس دبابيس وكابل USB لمشاريع Arduino IDE. وحدة إلكترونية دقيقة وموثوقة."
+    },
+    {
+      "id": "nano",
+      "name": "Arduino Nano V3.0 (ATmega328P CH340G, USB-C)",
+      "category": "boards",
+      "price_jod": 4,
+      "in_stock": true,
+      "tags": "اردوينو نانو arduino nano ch340 type-c",
+      "description": "لوحة Nano V3.0 بشريحة ATmega328P وCH340G، 5V و16MHz، مع منفذ USB-C وكابل USB لـ Arduino IDE. تدعم PWM وSPI."
+    },
+    {
+      "id": "esp32",
+      "name": "ESP32 DevKitC (ESP32-WROOM-32D)",
+      "category": "boards",
+      "price_jod": 6.5,
+      "in_stock": true,
+      "tags": "اي اس بي esp32 wifi bluetooth واي فاي",
+      "description": "لوحة تطوير ESP32-DevKitC بوحدة ESP32-WROOM-32D (واي فاي وبلوتوث)، متوافقة مع Arduino."
+    },
+    {
+      "id": "tcrt",
+      "name": "حساس تتبع الخط TCRT5000 (Line Follower)",
+      "category": "sensors",
+      "price_jod": 1.25,
+      "in_stock": true,
+      "tags": "tcrt5000 tcrt 5000 tcrt-5000 line follower line tracking line tracker line sensor track sensor ir sensor infrared حساس خط حساس الخط حساس تتبع الخط حساس تتبع خط متابع الخط متابع خط متتبع الخط متتبع خط تتبع الخط تتبع خط تابع الخط سنسر خط سنسر لاين لاين فولور لاين فولو لاين تراكر اشعه تحت الحمراء انفرا ريد اي ار خط اسود سيارة تتبع خط روبوت ملحقات الروبوت",
+      "description": "مستشعر متابع الخط TCRT5000 من ملحقات الروبوت: يعمل بالأشعة تحت الحمراء ويميّز بين الخط الأسود والسطح الفاتح. مخرج رقمي D0 وتناظري A0 مع مقاوم متغيّر لضبط الحساسية. مناسب لسيارات تتبع الخط."
+    },
+    {
+      "id": "hcsr04",
+      "name": "حساس مسافة بالموجات فوق الصوتية HC-SR04 (Ultrasonic)",
+      "category": "sensors",
+      "price_jod": 1.5,
+      "in_stock": true,
+      "tags": "hc-sr04 hcsr04 hc sr04 hc-sr 04 sr04 sr-04 ultrasonic ultra sonic ultrasound distance sensor range finder حساس مسافة حساس المسافة حساس مسافه حساس المسافه مستشعر مسافة مستشعرات مسافة موجات فوق صوتية فوق الصوتيه الترا سونك اولتراسونك التراسونك سنسر مسافة قياس المسافة حساس عوائق تجنب العوائق سيارة تتفادى عوائق esp32 raspberry pi stm32",
+      "description": "مستشعر مسافة بالموجات فوق الصوتية HC-SR04 بأربعة أطراف (Vcc, Trig, Echo, Gnd). متوافق مع Arduino وESP32 وRaspberry Pi وSTM32. مناسب لقياس المسافة وتجنب العوائق."
+    },
+    {
+      "id": "dht11",
+      "name": "حساس حرارة ورطوبة DHT11",
+      "category": "sensors",
+      "price_jod": 2.25,
+      "in_stock": true,
+      "tags": "dht11 dht 11 dht-11 dht temperature humidity temp sensor humidity sensor حساس حرارة حساس الحرارة حساس حراره حساس رطوبة حساس الرطوبة حساس درجة الحرارة قياس درجة الحرارة والرطوبة مستشعر حرارة مستشعر رطوبة سنسر حرارة سنسر رطوبة ديجيتال محطة طقس طقس جو",
+      "description": "مستشعر DHT11 لقياس درجة الحرارة والرطوبة، على موديول بثلاثة أطراف (GND، DATA، +) ويأتي مع أسلاك توصيل. مناسب لمحطات الطقس ومشاريع التحكم بالمناخ."
+    },
+    {
+      "id": "l298n",
+      "name": "درايفر محركات L298N (Motor Driver)",
+      "category": "mods",
+      "price_jod": 2.25,
+      "in_stock": true,
+      "tags": "driver motor drive l298n h-bridge درايفر درايفر محركات درايفر موتور درايفر ماتور مودول تحكم بالمحركات سيارة",
+      "description": "وحدة تحكم بالمحركات L298N (H-Bridge): تشغل محركين DC أو محرك ستيبر وتتحكم بالاتجاه والسرعة. متوافقة مع Arduino UNO وMEGA، ومناسبة للسيارات الذكية وروبوتات DIY."
+    },
+    {
+      "id": "joy",
+      "name": "عصا تحكم جويستيك ثنائية المحور (Joystick Module)",
+      "category": "mods",
+      "price_jod": 1.2,
+      "in_stock": true,
+      "tags": "joystick joy stick joystic joysticks joy-stick ky-023 ky023 xy joystick ps2 joystick thumb joystick analog joystick جويستيك جوستيك جوي ستيك جويستك جوستك جويستيك عصا تحكم عصا التحكم عصى تحكم عصا تحكم ألعاب عصا العاب ذراع تحكم ذراع الالعاب ذراع العاب مقبض تحكم عصاية تحكم ريموت سيارة ريموت ذراع روبوتية ثنائية المحور محورين حساس عصا التحكم وحدة مكعبات بناء إلكترونية",
+      "description": "قطعة عصا تحكم (جويستيك) ثنائية المحور: حساس عصا التحكم للألعاب ووحدة بناء إلكترونية. أطراف الموديول GND و5V وRX وRY وSW (زر ضغط). مناسبة للتحكم بالسيارات والذراع الروبوتية والألعاب."
+    },
+    {
+      "id": "jmm",
+      "name": "أسلاك جمبر ذكر-ذكر 40 سلك – 30 سم (Jumper M-M)",
+      "category": "wires",
+      "price_jod": 1.2,
+      "in_stock": true,
+      "tags": "jumper male to male ذكر الى ذكر ذكر ذكر ذكر m-m جمبر jumper wire wires اسلاك سلك كيبل توصيل دوبونت dupont 40 قطعة 30 سم arduino esp32 raspberry",
+      "description": "40 قطعة أسلاك توصيل (جمبر) ذكر إلى ذكر بطول 30 سم، متوافقة مع ESP32 وRaspberry Pi وArduino."
+    },
+    {
+      "id": "jmf",
+      "name": "أسلاك جمبر ذكر-أنثى 40 سلك – 30 سم (Jumper M-F)",
+      "category": "wires",
+      "price_jod": 1.2,
+      "in_stock": true,
+      "tags": "jumper male to female ذكر الى انثى ذكر انثى m-f جمبر jumper wire wires اسلاك سلك كيبل توصيل دوبونت dupont 40 قطعة 30 سم arduino esp32 raspberry",
+      "description": "40 قطعة أسلاك توصيل (جمبر) ذكر إلى أنثى بطول 30 سم، متوافقة مع ESP32 وRaspberry Pi وArduino."
+    },
+    {
+      "id": "jff",
+      "name": "أسلاك جمبر أنثى-أنثى 40 سلك – 30 سم (Jumper F-F)",
+      "category": "wires",
+      "price_jod": 1.2,
+      "in_stock": true,
+      "tags": "jumper female to female انثى الى انثى انثى انثى f-f جمبر jumper wire wires اسلاك سلك كيبل توصيل دوبونت dupont 40 قطعة 30 سم arduino esp32 raspberry",
+      "description": "40 قطعة أسلاك توصيل (جمبر) أنثى إلى أنثى بطول 30 سم، متوافقة مع ESP32 وRaspberry Pi وArduino."
+    },
+    {
+      "id": "bb",
+      "name": "بردبورد 400 نقطة (Breadboard)",
+      "category": "wires",
+      "price_jod": 1.25,
+      "in_stock": true,
+      "tags": "breadboard bread board بردبورد بريدبورد لوحة تجارب لوحه تجارب 400 نقطة بدون لحام",
+      "description": "بردبورد (لوحة تجارب) بـ 400 نقطة توصيل، لبناء الدوائر وتجربتها بدون لحام. مناسب لمشاريع Arduino وESP32 والدوائر الإلكترونية."
+    },
+    {
+      "id": "h1x18650",
+      "name": "حامل بطارية 1 خلية مع أسلاك – 3.7V (Battery Holder 1×18650)",
+      "category": "power",
+      "price_jod": 0.4,
+      "in_stock": true,
+      "tags": "holder battery holder 18650 1 cell single حامل بطارية حامل بطاريه حامل بطارية خلية واحدة 1 خلية حامل 18650 بطارية ليثيوم ليثيوم ايون li-ion 3.7v 3.7 فولت اسلاك سلك",
+      "description": "حامل بطارية لخلية واحدة مناسب لبطارية ليثيوم 18650 بجهد 3.7V، مع سلكين أحمر (+) وأسود (−) جاهزين للتوصيل. الحامل لا يحتوي على دائرة شحن أو حماية."
+    },
+    {
+      "id": "h2x18650",
+      "name": "حامل بطارية 2 خلية مع أسلاك (Battery Holder 2×18650)",
+      "category": "power",
+      "price_jod": 0.9,
+      "in_stock": true,
+      "tags": "holder battery holder 18650 2 cell double حامل بطارية حامل بطاريه حامل بطاريتين 2 خلية خليتين حامل 18650 بطارية ليثيوم ليثيوم ايون li-ion 7.4v اسلاك سلك سيارة روبوت",
+      "description": "حامل بطارية لخليتين مناسب لبطاريات ليثيوم 18650، مع سلكين أحمر (+) وأسود (−) جاهزين للتوصيل. مناسب لمشاريع السيارات والروبوتات. الحامل لا يحتوي على دائرة شحن أو حماية."
+    },
+    {
+      "id": "h3x18650",
+      "name": "حامل بطارية 3 خلايا مع أسلاك (Battery Holder 3×18650)",
+      "category": "power",
+      "price_jod": 1.1,
+      "in_stock": true,
+      "tags": "holder battery holder 18650 3 cell حامل بطارية حامل بطاريه 3 خلايا ثلاث خلايا ثلاثة حامل 18650 بطارية ليثيوم ليثيوم ايون li-ion 11.1v اسلاك سلك",
+      "description": "حامل بطارية لثلاث خلايا مناسب لبطاريات ليثيوم 18650، مع سلكين أحمر (+) وأسود (−) جاهزين للتوصيل. الحامل لا يحتوي على دائرة شحن أو حماية."
+    },
+    {
+      "id": "h4x18650",
+      "name": "حامل بطارية 4 خلايا مع أسلاك (Battery Holder 4×18650)",
+      "category": "power",
+      "price_jod": 1.25,
+      "in_stock": true,
+      "tags": "holder battery holder 18650 4 cell حامل بطارية حامل بطاريه 4 خلايا اربع خلايا اربعة حامل 18650 بطارية ليثيوم ليثيوم ايون li-ion 14.8v اسلاك سلك",
+      "description": "حامل بطارية لأربع خلايا مناسب لبطاريات ليثيوم 18650، مع سلكين أحمر (+) وأسود (−) جاهزين للتوصيل. الحامل لا يحتوي على دائرة شحن أو حماية."
+    },
+    {
+      "id": "clip9v",
+      "name": "سلك مشبك بطارية 9V – 15 سم (9V Battery Clip)",
+      "category": "power",
+      "price_jod": 0.25,
+      "in_stock": true,
+      "tags": "9v battery clip connector snap 9 volt مشبك بطارية مشبك بطاريه مشبك 9 فولت سلك مشبك بطارية بطارية 9 فولت 9v كليب كونيكتور موصل بطارية 9v حامل بطارية 9 فولت اسلاك",
+      "description": "مشبك بطارية 9V مع سلكين بطول 15 سم: أحمر (+) وأسود (−)، طرفا الأسلاك جاهزان للتوصيل على البردبورد أو المشاريع."
+    },
+    {
+      "id": "clip9v10",
+      "name": "مشابك بطارية 9V – 10 قطع، أسلاك 15 سم (9V Battery Clip ×10)",
+      "category": "power",
+      "price_jod": 2.0,
+      "in_stock": true,
+      "tags": "9v battery clip connector snap 9 volt 10 pcs مشبك بطارية مشابك بطارية مشبك بطاريه 10 قطع 10 حبات عشر قطع 9 فولت سلك مشبك بطارية بطارية 9 فولت كليب كونيكتور موصل بطارية 9v حامل بطارية 9 فولت اسلاك جملة",
+      "description": "طقم 10 قطع مشابك بطارية 9V، كل مشبك بسلكين بطول 15 سم: أحمر (+) وأسود (−)، طرفا الأسلاك جاهزان للتوصيل. مناسب للمشاريع الكثيرة أو الورش."
+    },
+    {
+      "id": "servo9g",
+      "name": "سيرفو ميكرو 9G ديجيتال (Servo Motor)",
+      "category": "motors",
+      "price_jod": 3.25,
+      "in_stock": true,
+      "tags": "servo سيرفو سيرفو موتور سيرفو ماتور محرك سيرفو ماطور 9g sg90 micro digital ميكرو ديجيتال ذراع روبوت motor",
+      "description": "سيرفو ميكرو رقمي (ديجيتال) 9G بتروس معدنية للتحكم الدقيق بالزاوية. مناسب للروبوتات والذراع الروبوتية والسيارات والقوارب والطائرات التي تعمل بالتحكم عن بعد."
+    },
+    {
+      "id": "stepper",
+      "name": "محرك ستيبر 5V مع درايفر ULN2003 (Stepper Motor)",
+      "category": "motors",
+      "price_jod": 3,
+      "in_stock": true,
+      "tags": "stepper ستيبر ستيبير ستيبر موتور ستيبر ماتور محرك ستيبر محرك خطوي تدريجي 28byj-48 uln2003 motor",
+      "description": "طقم محرك ستيبر (خطوي) 5V مع لوحة قيادة ULN2003، متوافق مع Arduino. مناسب للحركة الدقيقة والمشاريع التعليمية."
+    },
+    {
+      "id": "tt",
+      "name": "محرك TT مع علبة تروس 3-6V (DC Gear Motor)",
+      "category": "motors",
+      "price_jod": 1.5,
+      "in_stock": true,
+      "tags": "tt motor dc gear محرك tt محرك تي تي ماتور tt موتور tt ماتور اصفر محرك اصفر دي سي تروس عجل سيارة روبوت",
+      "description": "محرك TT ثنائي العمود (DC) مع علبة تروس، يعمل على 3–6V بسرعة 200 دورة بالدقيقة ونسبة تروس 1:48، مع سلكين جاهزين للتوصيل. مناسب لسيارات الروبوت الذكية وArduino."
+    },
+    {
+      "id": "n20",
+      "name": "محرك تروس معدني N20 (3-6V)",
+      "category": "motors",
+      "price_jod": 5,
+      "in_stock": true,
+      "tags": "n20 gear motor محرك تروس معدني محرك تروس ماتور تروس معدن موتور تروس مايكرو ميكرو دي سي dc عجل روبوت motor",
+      "description": "محرك مصغر N20 بتيار مستمر 3–6V مع علبة تروس معدنية كاملة وعمود D بقطر 3 مم، عزم عالٍ. متوفر بسرعتين 100 أو 200 دورة بالدقيقة (حدد السرعة عند الطلب). مناسب لعجلات الروبوت والسيارات الصغيرة."
+    },
+    {
+      "id": "coreless716",
+      "name": "محرك كوربلس 716 صغير 7×16 مم (Coreless Motor)",
+      "category": "motors",
+      "price_jod": 2.2,
+      "in_stock": true,
+      "tags": "coreless كوربلس كورلس كور لس 716 7x16 7*16 7×16 micro motor dc محرك صغير محرك ميكرو موتور صغير ماتور صغير ماطور صغير مايكرو ميني mini درون صغير ميني درون mini drone quadcopter كوادكوبتر طيارة طائرة هليكوبتر مروحة بروبلر propeller 3.7v ليبو lipo hubsan syma 1.25mm محرك عالي السرعة بدون قلب هواة نماذج اهتزاز اهتزازي vibration motor",
+      "description": "محرك صغير بكوب مجوف (Coreless) مقاس 7×16 مم، عالي السرعة وخفيف الوزن، مع كيبل وكونيكتور 1.25 مم جاهز للتوصيل. الأشهر لطائرات الدرون الصغيرة (ميني درون) ونماذج الطائرات والهوايات، ويصلح كمحرك اهتزاز للأعمال اليدوية."
+    },
+    {
+      "id": "a2208-2600kv",
+      "name": "محرك درون A2208 2600KV + عدة تثبيت (Brushless Motor)",
+      "category": "motors",
+      "price_jod": 11,
+      "in_stock": true,
+      "tags": "a2208 2208 2600kv 2600 kv كيلو فولت brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات محرك درون موتور درون ماتور درون ماطور درون محرك بدون فرش موتور بدون فرش ماتور بدون فرش drone fpv rc طيارة طائرة كوادكوبتر quadcopter طائرة رياضية طائرة تحكم عن بعد عدة تثبيت قاعدة تثبيت mount motor",
+      "description": "محرك بدون فرش (Brushless) موديل A2208 بسرعة 2600KV مع عدة التثبيت. مناسب لطائرات الدرون والطائرات الرياضية والتحكم عن بعد (RC FPV). يحتاج متحكم سرعة ESC مناسب (مثل ESC 40A) يُباع بشكل منفصل."
+    },
+    {
+      "id": "esc40a",
+      "name": "متحكم ESC 40A للمحرك بدون فرش (Brushless ESC)",
+      "category": "motors",
+      "price_jod": 10,
+      "in_stock": true,
+      "tags": "esc 40a 40 امبير اي اس سي ايسي speed controller سبيد كنترولر كنترولر متحكم متحكم سرعة متحكم سرعه دارة تحكم بالمحرك تحكم بسرعة المحرك مظبط سرعة brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات درون drone fpv rc طيارة طائرة كوادكوبتر quadcopter a2208 2600kv",
+      "description": "متحكم سرعة إلكتروني (ESC) بقدرة 40 أمبير للمحركات بدون فرش، لطائرات RC وFPV. يتوافق مع محرك A2208 2600KV (يُباع بشكل منفصل)."
+    },
+    {
+      "id": "xxd930kv",
+      "name": "محرك درون XXD 930KV بدون فرش (Brushless Motor)",
+      "category": "motors",
+      "price_jod": 8,
+      "in_stock": true,
+      "tags": "xxd 930kv 930 kv a2212 2212 brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات محرك درون موتور درون ماتور درون ماطور درون محرك بدون فرش موتور بدون فرش ماتور بدون فرش drone fpv rc طيارة طائرة كوادكوبتر quadcopter طائرة تحكم عن بعد motor",
+      "description": "محرك بدون فرش (Brushless) XXD بسرعة 930KV مع عدة التثبيت (قاعدة + محول مروحة + براغي) كما بالصورة، لطائرات الدرون وطائرات RC FPV. يحتاج متحكم سرعة ESC مناسب (مثل ESC 30A) يُباع بشكل منفصل."
+    },
+    {
+      "id": "esc30a",
+      "name": "متحكم ESC 30A للمحرك بدون فرش (Brushless ESC)",
+      "category": "motors",
+      "price_jod": 8,
+      "in_stock": true,
+      "tags": "esc 30a 30 امبير اي اس سي ايسي speed controller سبيد كنترولر كنترولر متحكم متحكم سرعة متحكم سرعه دارة تحكم بالمحرك تحكم بسرعة المحرك مظبط سرعة brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات درون drone fpv rc طيارة طائرة كوادكوبتر quadcopter xxd 930kv",
+      "description": "متحكم سرعة إلكتروني (ESC) بقدرة 30 أمبير للمحركات بدون فرش، لطائرات RC وFPV. يتوافق مع محرك XXD 930KV (يُباع بشكل منفصل)."
+    },
+    {
+      "id": "drone-a2208-esc40",
+      "name": "طقم درون A2208 2600KV + ESC 40A (محرك مع متحكم)",
+      "category": "motors",
+      "price_jod": 21,
+      "in_stock": true,
+      "tags": "طقم كيت kit set a2208 2208 2600kv esc 40a 40 امبير محرك مع متحكم محرك ومتحكم موتور ومتحكم ماتور مع كنترولر محرك درون موتور درون ماتور درون ماطور درون brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات speed controller سبيد كنترولر اي اس سي ايسي drone fpv rc طيارة طائرة كوادكوبتر quadcopter عدة تثبيت motor",
+      "description": "طقم كامل: محرك بدون فرش A2208 2600KV مع عدة التثبيت + متحكم سرعة ESC 40A، جاهز لطائرات الدرون وRC FPV."
+    },
+    {
+      "id": "drone-xxd930-esc30",
+      "name": "طقم درون XXD 930KV + ESC 30A (محرك مع متحكم)",
+      "category": "motors",
+      "price_jod": 16,
+      "in_stock": true,
+      "tags": "طقم كيت kit set xxd 930kv 930 a2212 2212 esc 30a 30 امبير محرك مع متحكم محرك ومتحكم موتور ومتحكم ماتور مع كنترولر محرك درون موتور درون ماتور درون ماطور درون brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات speed controller سبيد كنترولر اي اس سي ايسي drone fpv rc طيارة طائرة كوادكوبتر quadcopter عدة تثبيت motor",
+      "description": "طقم كامل: محرك بدون فرش XXD 930KV مع عدة التثبيت + متحكم سرعة ESC 30A، جاهز لطائرات الدرون وRC FPV."
+    },
+    {
+      "id": "brl1503x4",
+      "name": "طقم 4 محركات درون 1503 2750KV بدون فرش + 4 مراوح (Brushless Motor ×4)",
+      "category": "motors",
+      "price_jod": 10,
+      "in_stock": true,
+      "tags": "طقم كيت kit set 4 اربع 4 قطع brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات محرك درون موتور درون ماتور درون ماطور درون محرك بدون فرش موتور بدون فرش ماتور بدون فرش 1503 2750kv 2750 kv drone fpv rc طيارة طائرة كوادكوبتر quadcopter سباق freestyle فري ستايل مروحة مراوح بروبلر propeller motor",
+      "description": "طقم 4 محركات بدون فرش (Brushless) موديل 1503 بسرعة 2750KV مع 4 مراوح ومسامير التثبيت. مناسب لطائرات الدرون FPV للسباق والطيران الحر، والكوادكوبتر، والتركيب الذاتي للطائرات الصغيرة. يحتاج 4 متحكمات ESC (تُباع بشكل منفصل)."
+    },
+    {
+      "id": "brl1503",
+      "name": "محرك درون 1503 2750KV بدون فرش (Brushless Motor)",
+      "category": "motors",
+      "price_jod": 3,
+      "in_stock": true,
+      "tags": "قطعة واحدة 1 حبة brushless براشلس برشلس بلاشلس بدون فرش بدون فحمات محرك درون موتور درون ماتور درون ماطور درون محرك بدون فرش موتور بدون فرش ماتور بدون فرش 1503 2750kv 2750 kv drone fpv rc طيارة طائرة كوادكوبتر quadcopter سباق freestyle فري ستايل مروحة مراوح بروبلر propeller motor",
+      "description": "محرك بدون فرش (Brushless) موديل 1503 بسرعة 2750KV لطائرات الدرون FPV الصغيرة والكوادكوبتر وطائرات التحكم عن بعد. السعر للمحرك الواحد مع مروحة ومسامير تثبيت، وإذا بدك طقم 4 محركات مع المراوح فهو متوفر بسعر أوفر. يحتاج ESC (يُباع بشكل منفصل)."
+    },
+    {
+      "id": "tft",
+      "name": "شاشة TFT ملونة 2.0 إنش ST7789V (240×320)",
+      "category": "mods",
+      "price_jod": 5,
+      "in_stock": true,
+      "tags": "شاشة tft oled lcd st7789 st7789v display اوليد ملونة 2 انش 2.0 spi شاشة عرض",
+      "description": "شاشة TFT ملونة بقياس 5.08 سم (2.0 إنش) ودقة 240×320 بكسل (RGB)، مع دائرة تحكم ST7789V. متوافقة مع Arduino وRaspberry Pi وESP32 وSTM32."
+    },
+    {
+      "id": "esp32exp",
+      "name": "لوحة توسيع ESP32 – 38 Pin (Expansion Board)",
+      "category": "mods",
+      "price_jod": 3,
+      "in_stock": true,
+      "tags": "esp32 expansion board لوحة توسيع توزيع esp32s devkitc 38 pin shield شيلد قاعدة",
+      "description": "لوحة توسيع (توزيع) لبورد ESP32 بـ 38 دبوس (ESP32S / DevKitC): تفرد كل الدبابيس بسهولة، ومعها منفذا Micro USB وType-C. مناسبة للمشاريع المدمجة ولوحات التطوير اللاسلكية والروبوتات."
+    },
+    {
+      "id": "solar45",
+      "name": "لوح طاقة شمسية 4.5V (Solar Panel)",
+      "category": "mods",
+      "price_jod": 1.5,
+      "in_stock": true,
+      "tags": "solar panel لوح خلية شمسية طاقة شمسيه 4.5v شحن شمسي كهروضوئي",
+      "description": "لوح طاقة شمسية صغير بجهد 4.5 فولت، لوح شحن شمسي كهروضوئي (Photovoltaic) للمشاريع الصغيرة."
+    },
+    {
+      "id": "relay",
+      "name": "مودول ريلاي 5V قناة واحدة مع عزل OPTO",
+      "category": "mods",
+      "price_jod": 1.25,
+      "in_stock": true,
+      "tags": "relay ريلاي ريليه مرحل 5v opto optocoupler مفتاح مستوى عالي منخفض",
+      "description": "مودول ريلاي (مرحل) 5 فولت بقناة واحدة مع عزل OPTO ومفتاح اختيار مستوى التشغيل (عالي/منخفض). متوافق مع Arduino وRaspberry Pi وARM وAVR."
+    },
+    {
+      "id": "buzzer",
+      "name": "بازر صفارة (Buzzer)",
+      "category": "mods",
+      "price_jod": 0.4,
+      "in_stock": true,
+      "tags": "buzzer بازر جرس صفارة انذار passive buzzer سماعة صغيرة",
+      "description": "وحدة بازر (صفارة) سلبية، مناسبة للروبوتات وأنظمة الإنذار. متوافقة مع Arduino وRaspberry Pi والمتحكمات الدقيقة."
+    },
+    {
+      "id": "d4007",
+      "name": "ديود 1N4007 (Rectifier Diode 1A 1000V)",
+      "category": "comps",
+      "price_jod": 0.05,
+      "in_stock": true,
+      "tags": "1n4007 4007 ديود ديودات دايود diode rectifier تقويم 1a 1000v",
+      "description": "ديود تقويم 1N4007 (1 أمبير – 1000 فولت): الأشهر لتقويم التيار المتردد AC إلى DC، ولحماية الدوائر من عكس القطبية، ولحماية الترانزستور من تيار الملفات (ريلاي/موتور). الشريط الفضي = الكاثود."
+    },
+    {
+      "id": "d4148",
+      "name": "ديود 1N4148 (Signal Diode سريع صغير)",
+      "category": "comps",
+      "price_jod": 0.05,
+      "in_stock": true,
+      "tags": "1n4148 4148 ديود ديودات دايود diode signal اشارة سريع زجاجي صغير",
+      "description": "ديود إشارات سريع زجاجي (100 فولت – حتى 200 ملي أمبير): للدوائر الرقمية والإشارات وحماية أطراف المتحكم. مش مناسب للتيارات الكبيرة."
+    },
+    {
+      "id": "fr107",
+      "name": "ديود FR107 (Fast Recovery 1A 1000V)",
+      "category": "comps",
+      "price_jod": 0.05,
+      "in_stock": true,
+      "tags": "fr107 ديود ديودات دايود diode fast recovery سريع استعادة سريعة smps 1a 1000v",
+      "description": "ديود استعادة سريعة (1 أمبير – 1000 فولت): مناسب لمصادر الطاقة SMPS والدوائر عالية التردد حيث ديود 1N4007 يكون بطيء."
+    },
+    {
+      "id": "d5408",
+      "name": "ديود 1N5408 (Rectifier Diode 3A 3 امبير 1000V)",
+      "category": "comps",
+      "price_jod": 0.05,
+      "in_stock": true,
+      "tags": "1n5408 5408 ديود ديودات دايود diode rectifier تقويم 3a 3 امبير 1000v",
+      "description": "ديود تقويم قوي (3 أمبير – 1000 فولت): للمقومات والشواحن والأحمال اللي تحتاج تيار أكبر من 1N4007."
+    },
+    {
+      "id": "d5822",
+      "name": "ديود شوتكي 1N5822 (Schottky Diode 3A 40V)",
+      "category": "comps",
+      "price_jod": 0.05,
+      "in_stock": true,
+      "tags": "1n5822 5822 شوتكي schottky ديود ديودات دايود diode 3a 3 امبير 40v شمسي",
+      "description": "ديود شوتكي (3 أمبير – 40 فولت): هبوط جهد قليل وسرعة عالية، مناسب لمحولات DC-DC وحماية عكس القطبية والشحن بالألواح الشمسية."
+    },
+    {
+      "id": "d5819",
+      "name": "ديود شوتكي 1N5819 (Schottky Diode 1A 40V)",
+      "category": "comps",
+      "price_jod": 0.05,
+      "in_stock": true,
+      "tags": "1n5819 5819 شوتكي schottky ديود ديودات دايود diode 1a 1 امبير 40v شمسي",
+      "description": "ديود شوتكي (1 أمبير – 40 فولت): هبوط جهد قليل، ممتاز لحماية عكس القطبية ودوائر البطاريات والشحن الشمسي والتيارات الصغيرة."
+    },
+    {
+      "id": "d5399",
+      "name": "ديود 1N5399 (Rectifier Diode 1.5A 1000V)",
+      "category": "comps",
+      "price_jod": 0.05,
+      "in_stock": true,
+      "tags": "1n5399 5399 ديود ديودات دايود diode rectifier تقويم 1.5a 1000v",
+      "description": "ديود تقويم (1.5 أمبير – 1000 فولت): خيار وسط بين 1N4007 و1N5408 لدوائر التقويم والتغذية."
+    },
+    {
+      "id": "fr207",
+      "name": "ديود FR207 (Fast Recovery 2A 1000V)",
+      "category": "comps",
+      "price_jod": 0.05,
+      "in_stock": true,
+      "tags": "fr207 ديود ديودات دايود diode fast recovery سريع استعادة سريعة smps 2a 2 امبير 1000v",
+      "description": "ديود استعادة سريعة (2 أمبير – 1000 فولت): لمصادر الطاقة SMPS والمحولات والدوائر عالية التردد."
+    },
+    {
+      "id": "dkit",
+      "name": "مجموعة ديودات متنوعة (8 أنواع × 5 حبات = 40 ديود)",
+      "category": "comps",
+      "price_jod": 1.7,
+      "in_stock": true,
+      "tags": "مجموعة طقم ديودات diodes kit set ديود ديودات دايود شوتكي",
+      "description": "40 ديود: 5 حبات من كل نوع — 1N4007، 1N4148، FR107، 1N5408، 1N5822، 1N5819، 1N5399، FR207. أوفر من شرائها منفردة (2.00 دينار)."
+    },
+    {
+      "id": "res25",
+      "name": "مقاومة 220 أوم 1/4 واط (25 حبة) – Resistor 220Ω",
+      "category": "comps",
+      "price_jod": 0.7,
+      "in_stock": true,
+      "tags": "مقاومة مقاومه مقاومات resistor resistors 220 220r 220ohm 220 اوم اوم ohm 1/4w ربع واط 5% كربونية carbon led ليد 25 حبة مجموعة",
+      "description": "25 مقاومة كربونية 220Ω (220R) بقدرة 1/4 واط وسماحية 5%. الأشهر لتحديد تيار الـLED ولمشاريع الإلكترونيات والتجارب. السعر للمجموعة كاملة (25 حبة)."
+    },
+    {
+      "id": "res1",
+      "name": "مقاومة 220 أوم 1/4 واط (حبة واحدة) – Resistor 220Ω",
+      "category": "comps",
+      "price_jod": 0.04,
+      "in_stock": true,
+      "tags": "مقاومة مقاومه مقاومات resistor resistors 220 220r 220ohm 220 اوم اوم ohm 1/4w ربع واط 5% كربونية carbon led ليد حبة وحدة مفرد",
+      "description": "مقاومة كربونية 220Ω (220R) بقدرة 1/4 واط وسماحية 5%. الأشهر لتحديد تيار الـLED ولمشاريع الإلكترونيات والتجارب. السعر للحبة الواحدة."
+    },
+    {
+      "id": "cap10uf50v",
+      "name": "مواسع كيميائي 10 ميكروفاراد 50 فولت (Electrolytic Capacitor 10uF 50V)",
+      "category": "comps",
+      "price_jod": 0.05,
+      "in_stock": true,
+      "tags": "مواسع مكثف كيميائي ميكروفاراد 10uf 50v capacitor electrolytic 10 microfarad radial فلترة تنعيم decoupling filtering passive comps",
+      "description": "مواسع ألمنيوم كيميائي أسطواني بقطبية محددة (Radial Electrolytic Capacitor) بسعة 10 ميكروفاراد وجهد تشغيلي أقصى 50 فولت. مناسب لدوائر تنعيم وفلترة مزودات الطاقة، إزالة الضوضاء والتموجات (Decoupling)، وتمرير إشارات التردد الصوتي مع حجب التيار المستمر في المشاريع الإلكترونية."
+    }
+  ]
 }
