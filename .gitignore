@@ -1,2 +1,15 @@
+# Bytecode
 __pycache__/
+*.py[cod]
+
+# Virtual environments (matching your exact env name)
+myeny/
 myenv/
+.venv/
+venv/
+
+# Environment variables & secrets
+.env
+
+# Windows WSL zone identifier artifacts
+*:Zone.Identifier
