@@ -192,6 +192,15 @@
       "description": "حساس استشعار الأشعة تحت الحمراء (IR) المخصص لتحذير وتجنب العوائق لروبوت السيارة الذكية وأردوينو. يعتمد على عاكس فوتوني بثلاثة أطراف (3PIN)، مع إمكانية تعديل الحساسية لكشف العقبات بدقة عالية."
     },
     {
+      "id": "hcsr04_with_bracket",
+      "name": "حساس مسافة بالموجات فوق الصوتية HC-SR04 مع حامل عملي (Ultrasonic with Bracket)",
+      "category": "sensors",
+      "price_jod": 2.5,
+      "in_stock": true,
+      "tags": "hc-sr04 hcsr04 ultrasonic حساس مسافة حامل حساس براكيت bracket سيارة ذكية روبوت esp32 raspberry pi stm32",
+      "description": "مستشعر مسافة بالموجات فوق الصوتية HC-SR04 مرفق معه حامل (براكيت) عملي وثابت، مخصص للسيارات الذكية، أذرع الروبوت، القوارب، ونماذج الطائرات. متوافق مع ESP32 وRaspberry Pi وSTM32 وArduino."
+    },
+    {
       "id": "l298n",
       "name": "درايفر محركات L298N (Motor Driver)",
       "category": "mods",
