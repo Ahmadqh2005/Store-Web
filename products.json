@@ -138,6 +138,24 @@
       "description": "لوحة تطوير NodeMCU ESP-32S بمعالج ESP-WROOM-32E تدعم الاتصال اللاسلكي واي فاي وبلوتوث. مصممة لتطبيقات الإلكترونيات، أنظمة التحكم، ومشاريع إنترنت الأشياء (IoT) وأجهزة الكمبيوتر، مع توافق كامل وموثوقية عالية."
     },
     {
+      "id": "esp32_cp2102_typec_kit",
+      "name": "لوحة تطوير ESP32 مع CP2102 ووحدة WROOM-32 (مع 10 كابلات)",
+      "category": "boards",
+      "price_jod": 7.0,
+      "in_stock": true,
+      "tags": "esp32 cp2102 wroom32 type-c طقم بدء تشغيل ثنائي النواة واي فاي بلوتوث",
+      "description": "طقم بدء تشغيل ESP32 ثنائي النواة وثنائي الوضع بمنفذ Type-C، يضم وحدة ESP32 WROOM-32 ومحول CP2102، مع 10 كابلات توصيل أم-أم (ذكر-ذكر). مناسب لمشاريع الأتمتة وإنترنت الأشياء."
+    },
+    {
+      "id": "uno_r3_typec_ch340g",
+      "name": "لوحة تطوير Arduino UNO R3 (Type-C - CH340G)",
+      "category": "boards",
+      "price_jod": 6.0,
+      "in_stock": true,
+      "tags": "arduino uno r3 type-c ch340g atmega328p-au 16mhz اردووينو يونو",
+      "description": "لوحة تطوير Arduino UNO R3 بشريحة ATmega328P-AU ومعالج بـ 16 ميجاهرتز مع شريحة الاتصال CH340G ومنفذ USB-C الحديث. متوافقة تماماً مع بيئة تطوير Arduino IDE ومشاريع الروبوتات."
+    },
+    {
       "id": "tcrt",
       "name": "حساس تتبع الخط TCRT5000 (Line Follower)",
       "category": "sensors",
