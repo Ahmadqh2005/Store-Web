@@ -120,6 +120,15 @@
       "description": "لوحة تطوير ESP32-DevKitC بوحدة ESP32-WROOM-32D (واي فاي وبلوتوث)، متوافقة مع Arduino."
     },
     {
+      "id": "esp32_typec_38pin",
+      "name": "لوحة تطوير ESP32 Type-C (38 Pin - CP2102)",
+      "category": "boards",
+      "price_jod": 7.0,
+      "in_stock": true,
+      "tags": "اي اس بي esp32 esp-32d type-c usb-c cp2102 38 pin 38 دبوس انترنت الأشياء iot واي فاي بلوتوث بورد لوحة تطوير",
+      "description": "لوحة تطوير ESP32 بـ 38 دبوساً مع واجهة USB-C ومحول USB إلى UART نوع CP2102، تعتمد وحدة ESP-32D. تتميز باتصال واي فاي وبلوتوث، وتعتبر مثالية لمشاريع إنترنت الأشياء (IoT) وعلم الروبوتات وتطبيقات الأتمتة، متوافقة تماماً مع معيار ESP32-DevKitC-32."
+    },
+    {
       "id": "tcrt",
       "name": "حساس تتبع الخط TCRT5000 (Line Follower)",
       "category": "sensors",
