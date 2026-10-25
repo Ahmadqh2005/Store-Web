@@ -1055,8 +1055,8 @@
           </div>
         </div>
         <div class="sec">
-          <h2>وصل حديثاً</h2>
-          <div class="grid">${S.items.slice(-8).reverse().map(card).join("")}</div>
+            <h2>القطع الأساسية والمميزة ⚡</h2>
+            <div class="grid">${["uno", "nano", "esp32", "tcrt", "hcsr04", "dht11", "l298n", "servo9g"].map(byId).filter(Boolean).map(card).join("")}</div>
         </div>`;
             }
             $("app").innerHTML = html;
@@ -1164,7 +1164,7 @@
 
         function showWelcomeBubble() {
             appendBotMessage({
-                reply: "### أهلاً بك في متجر الكترونياتك ⚡\nأنا المهندس المساعد الذكي في المتجر. احكيلي شو المشروع اللي ببالك أو كيف توصل أي حساس، ورح أشرحلك خطوات التوصيل والقطع المناسبة بوضوح وأجهزلك إياها مباشرة!",
+                reply: "### أهلاً بك في متجر الكترونياتك ⚡\nأنا المهندس المساعد  في المتجر. احكيلي شو المشروع اللي ببالك أو كيف توصل أي حساس، ورح أشرحلك خطوات التوصيل والقطع المناسبة بوضوح وأجهزلك إياها مباشرة!",
                 recommended_items: [],
                 missing_items: [],
                 follow_up_suggestions: [
