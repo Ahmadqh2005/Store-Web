@@ -9,23 +9,12 @@
         content="متجر الكترونياتك (Electronyatk): بوردات، حساسات، ومكونات إلكترونية ومشاريع هندسية. اطلب أونلاين وتوصيل فوري عبر واتساب وانستغرام.">
     <meta name="keywords"
         content="الكترونياتك, electronyatk, elktronyatak, قطع الكترونية, مشاريع هندسية, الأردن, ديود, ديودات, diode, مقاومة, resistor, 1N4007, 1N4148">
+    <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"OnlineStore","name":"الكترونياتك","alternateName":["Electronyatk","Elktronyatak"],"url":"https://elktronyatak.netlify.app/","sameAs":["https://www.instagram.com/elktronyatak"]}
+  </script>
     <style>
-        /* 1. DARK THEME (Default Variables) */
+        /* 1. LIGHT THEME (Now the Main Default) */
         :root {
-            --bg: #0b0e13;
-            --card: #141922;
-            --tx: #eef2f6;
-            --mut: #8e99a8;
-            --ac: #2f7bff;
-            --y: #ffc21a;
-            --bd: #232b37;
-            box-sizing: border-box;
-            padding-top: env(safe-area-inset-top, 0px);
-            padding-bottom: env(safe-area-inset-bottom, 0px);
-        }
-
-        /* 2. LIGHT THEME (Active when .light-theme class is on body) */
-        body.light-theme {
             --bg: #f3f4f6;
             --card: #ffffff;
             --tx: #1f2937;
@@ -33,6 +22,22 @@
             --ac: #2563eb;
             --y: #f59e0b;
             --bd: #e5e7eb;
+            box-sizing: border-box;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        /* 2. DARK THEME (Active only when toggled) */
+        body.dark-theme {
+            --bg: #0b0e13;
+            --card: #141922;
+            --tx: #eef2f6;
+            --mut: #8e99a8;
+            --ac: #2f7bff;
+            --y: #ffc21a;
+            --bd: #232b37;
+            background-image: none !important;
+            /* Removes dotted background in dark mode */
         }
 
         * {
@@ -46,16 +51,13 @@
         body {
             margin: 0;
             background-color: var(--bg);
+            /* Dotted background pattern */
+            background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+            background-size: 20px 20px;
             color: var(--tx);
             font-family: "Segoe UI", Tahoma, Arial, sans-serif;
             line-height: 1.5;
             transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Light theme dotted background */
-        body.light-theme {
-            background-image: radial-gradient(#d1d5db 1px, transparent 1px);
-            background-size: 20px 20px;
         }
 
         button {
@@ -63,18 +65,17 @@
             cursor: pointer;
         }
 
-        /* Top Header Styling (Dark Mode Default) */
         .top {
             color: var(--tx);
             padding: 18px 14px 22px;
-            background: radial-gradient(circle at 85% 0%, rgba(47, 123, 255, .45), transparent 45%), radial-gradient(circle at 10% 100%, rgba(255, 194, 26, .18), transparent 40%), #0b0e13;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--bd);
         }
 
-        /* Top Header Styling (Light Mode Override) */
-        body.light-theme .top {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
+        /* Adjust top bar background for dark mode */
+        body.dark-theme .top {
+            background: radial-gradient(circle at 85% 0%, rgba(47, 123, 255, .15), transparent 45%), #0b0e13;
         }
 
         .w {
@@ -118,32 +119,14 @@
             font-weight: 600;
         }
 
-        /* Cart Button (Dark Mode Default) */
         .cb {
-            background: var(--y);
-            color: #10151c;
-            font-weight: 700;
-            border: 1px solid transparent;
-            border-radius: 12px;
-            padding: 8px 14px;
-        }
-
-        /* Cart Button (Light Mode Override) */
-        body.light-theme .cb {
-            background: #ffffff;
-            color: var(--tx);
-            border-color: var(--bd);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Theme Toggle Button */
-        .tb {
             background: var(--card);
             color: var(--tx);
+            font-weight: 700;
             border: 1px solid var(--bd);
             border-radius: 12px;
-            padding: 8px 10px;
-            font-size: 16px;
+            padding: 8px 14px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
         }
 
         .hero h1 {
@@ -182,7 +165,7 @@
             color: var(--tx);
             border-radius: 12px;
             margin-top: 6px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .1);
             z-index: 9;
             overflow: hidden;
             border: 1px solid var(--bd);
@@ -325,6 +308,11 @@
             color: var(--ac);
         }
 
+        body.dark-theme .pr {
+            color: var(--y);
+            /* Back to yellow prices in dark mode */
+        }
+
         .p .add:disabled {
             background: var(--bg);
             color: var(--mut);
@@ -380,7 +368,7 @@
         .ov {
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, .55);
+            background: rgba(0, 0, 0, .4);
             backdrop-filter: blur(3px);
             display: none;
             z-index: 20;
@@ -396,7 +384,7 @@
             overflow: auto;
             border-radius: 18px 18px 0 0;
             padding: 16px;
-            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.1);
         }
 
         .row {
@@ -470,7 +458,7 @@
             font-size: 80px;
         }
 
-        /* NEW FLOATING CHAT BUTTON */
+        /* NEW FLOATING CHAT BUTTON (Match image design) */
         .fab {
             position: fixed;
             right: 24px;
@@ -487,6 +475,11 @@
             box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
             z-index: 10;
             transition: all 0.3s ease;
+        }
+
+        body.dark-theme .fab {
+            background: var(--y);
+            color: #10151c;
         }
 
         .fab:hover {
@@ -520,7 +513,6 @@
             padding: 0;
         }
 
-        /* Chat Header */
         .ch-h {
             padding: 14px 16px;
             border-bottom: 1px solid var(--bd);
@@ -528,17 +520,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: var(--ac);
+            color: #ffffff;
             border-radius: 18px 18px 0 0;
         }
 
-        body.light-theme .ch-h {
-            background: var(--ac);
-            color: #ffffff;
-        }
-
-        body.light-theme .ch-h .bk {
+        .ch-h .bk {
             color: #ffffff !important;
             opacity: 0.9;
+        }
+
+        .ch-h .bk:hover {
+            opacity: 1;
         }
 
         #ms {
@@ -548,10 +541,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-        }
-
-        body.light-theme #ms {
-            background: #f8fafc;
+            background: var(--bg);
         }
 
         .m {
@@ -570,10 +560,9 @@
             border-bottom-right-radius: 4px;
         }
 
-        /* Bot Message Base (Dark) */
         .m.b {
             align-self: flex-start;
-            background: #10151d;
+            background: var(--card);
             border: 1px solid var(--bd);
             border-bottom-left-radius: 4px;
             line-height: 1.75;
@@ -582,14 +571,13 @@
             white-space: normal;
         }
 
-        /* Bot Message Base (Light Override) */
-        body.light-theme .m.b {
-            background: #ffffff;
-        }
-
         .m.b p {
             margin: 0 0 10px 0;
             color: var(--mut);
+        }
+
+        .m.b p:last-child {
+            margin-bottom: 0;
         }
 
         .m.b h4 {
@@ -597,14 +585,10 @@
             font-size: 14.5px;
             color: var(--tx);
             font-weight: 700;
-            background: rgba(47, 123, 255, 0.1);
+            background: var(--bg);
             border-right: 3px solid var(--ac);
             padding: 6px 10px;
             border-radius: 6px;
-        }
-
-        body.light-theme .m.b h4 {
-            background: var(--bg);
         }
 
         .m.b ul {
@@ -640,8 +624,8 @@
         }
 
         .chat-alert {
-            background: rgba(47, 123, 255, 0.08);
-            border: 1px solid rgba(47, 123, 255, 0.28);
+            background: rgba(37, 99, 235, 0.08);
+            border: 1px solid rgba(37, 99, 235, 0.2);
             border-right: 3px solid var(--ac);
             padding: 9px 12px;
             border-radius: 10px;
@@ -694,19 +678,15 @@
             justify-content: space-between;
             align-items: center;
             padding: 6px 12px;
-            background: var(--card);
+            background: var(--bd);
             border-bottom: 1px solid var(--bd);
             font-size: 11.5px;
             color: var(--tx);
             font-weight: 600;
         }
 
-        body.light-theme .code-hd {
-            background: #e2e8f0;
-        }
-
         .code-hd button {
-            background: var(--bg);
+            background: var(--card);
             border: 1px solid var(--bd);
             border-radius: 6px;
             padding: 4px 10px;
@@ -714,6 +694,7 @@
             cursor: pointer;
             font-size: 11.5px;
             font-weight: 700;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
         }
 
         .code-pre {
@@ -726,6 +707,7 @@
             text-align: left;
             color: var(--tx);
             white-space: pre;
+            background: var(--bg);
         }
 
         .toast {
@@ -744,23 +726,15 @@
             display: none;
         }
 
-        /* Missing items (Dark mode) */
         .missing-box {
             margin-top: 12px;
             padding: 12px 14px;
             border-radius: 12px;
-            background: rgba(255, 194, 26, 0.08);
-            border: 1px solid rgba(255, 194, 26, 0.35);
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
             border-right: 4px solid var(--y);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             white-space: normal;
-        }
-
-        /* Missing items (Light mode override) */
-        body.light-theme .missing-box {
-            background: #fffbeb;
-            border: 1px solid #fde68a;
-            border-right: 4px solid var(--y);
         }
 
         .missing-title {
@@ -769,7 +743,7 @@
             gap: 6px;
             font-weight: 800;
             font-size: 13px;
-            color: #d97706;
+            color: var(--y);
             margin-bottom: 8px;
         }
 
@@ -782,8 +756,8 @@
 
         .missing-tag {
             background: var(--card);
-            border: 1px solid var(--bd);
-            color: #d97706;
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            color: var(--tx);
             padding: 4px 10px;
             border-radius: 8px;
             font-size: 12px;
@@ -791,10 +765,6 @@
             display: inline-flex;
             align-items: center;
             gap: 5px;
-        }
-
-        body.light-theme .missing-tag {
-            border-color: #fcd34d;
         }
 
         .missing-note {
@@ -835,6 +805,10 @@
             color: var(--ac);
             font-weight: 600;
             font-size: 13px;
+        }
+
+        body.dark-theme .ql {
+            color: var(--y);
         }
 
         .qt {
@@ -878,7 +852,7 @@
         }
 
         .chip:hover {
-            background: var(--card);
+            background: var(--bd);
         }
 
         .ch-f {
@@ -902,6 +876,7 @@
         .ch-f input:focus {
             outline: none;
             border-color: var(--ac);
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
         }
 
         .ch-f button {
@@ -918,6 +893,15 @@
             background: #1d4ed8;
         }
 
+        body.dark-theme .ch-f button {
+            background: var(--y);
+            color: #10151c;
+        }
+
+        body.dark-theme .ch-f button:hover {
+            background: #d97706;
+        }
+
         footer {
             text-align: center;
             color: var(--mut);
@@ -928,13 +912,6 @@
 </head>
 
 <body>
-    <!-- Script to apply theme BEFORE page renders to prevent flickering -->
-    <script>
-        if (localStorage.getItem("elktronyatak_theme") === "light") {
-            document.body.classList.add("light-theme");
-        }
-    </script>
-
     <div class="top">
         <div class="w">
             <div class="hd">
@@ -943,7 +920,8 @@
                     <span id="sn">الكترونياتك</span>
                 </div>
                 <div style="display: flex; gap: 8px;">
-                    <button class="tb" onclick="toggleTheme()" title="تغيير المظهر">🌓</button>
+                    <!-- Theme Toggle Button -->
+                    <button class="cb" onclick="toggleTheme()" title="تغيير المظهر">🌓</button>
                     <button class="cb" id="cbt" onclick="openCart()">🛒 <span id="cn">0</span></button>
                 </div>
             </div>
@@ -967,7 +945,6 @@
 
     <footer id="ft"></footer>
 
-    <!-- Beautiful Icon Chat Button -->
     <button class="fab" id="fab" onclick="chatOpen()" aria-label="Open AI Assistant">
         <span class="dot"></span>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -1008,14 +985,19 @@
     <div class="toast" id="toast"></div>
 
     <script>
-        const $ = id => document.getElementById(id);
-
-        // Theme Toggle Functionality
+        // --- THEME TOGGLE LOGIC ---
         function toggleTheme() {
-            document.body.classList.toggle("light-theme");
-            const isLight = document.body.classList.contains("light-theme");
-            localStorage.setItem("elktronyatak_theme", isLight ? "light" : "dark");
+            document.body.classList.toggle("dark-theme");
+            const isDark = document.body.classList.contains("dark-theme");
+            localStorage.setItem("elktronyatak_theme", isDark ? "dark" : "light");
         }
+
+        // Load saved theme when the page opens
+        if (localStorage.getItem("elktronyatak_theme") === "dark") {
+            document.body.classList.add("dark-theme");
+        }
+
+        const $ = id => document.getElementById(id);
 
         function showToast(text) {
             const t = $("toast");
@@ -1035,6 +1017,7 @@
             document.body.removeChild(ta);
         }
 
+        // 1. Per-User Isolated Session ID (stored in browser localStorage)
         function getOrCreateSessionId() {
             let sid = localStorage.getItem("elktronyatak_session_id");
             if (!sid) {
@@ -1045,6 +1028,7 @@
         }
         let SESSION_ID = getOrCreateSessionId();
 
+        // 2. Global Store State (Fetched dynamically from /api/products)
         let S = {
             store_name: "الكترونياتك",
             whatsapp: "962788600458",
@@ -1088,6 +1072,7 @@
             }
         }
 
+        // 4. Smart Arabic Search & Synonym Matching
         const SYN = {};
         const Y = (c, w, ...ks) => ks.forEach(k => SYN[nz(k)] = { c, w: nz(w) });
         Y("motors", "محركات", "ماطور", "ماتور", "موتور", "موتر", "محرك", "محركات", "motor", "motors", "مواتير", "مواطير", "دينمو", "موتورات", "ماتورات", "ماطورات", "مواتر", "ماطر");
@@ -1165,6 +1150,7 @@
             return r.map((x, i) => [x, i]).sort((a, b) => sc(b[0]) - sc(a[0]) || a[1] - b[1]).map(a => a[0]);
         }
 
+        // 5. Render Product Cards with Automatic Image & Fallback Icon
         function renderImageOrIcon(x) {
             const fallbackIcon = catOf(x.category).icon;
             if (!x.image) return fallbackIcon;
@@ -1222,7 +1208,7 @@
                     return `<div class="bd">
                 <b>${esc(k.name)}</b>
                 <small>${esc(k.description)}</small>
-                <b style="color:var(--ac)">${fmt(its.reduce((s, x) => s + x.price_jod, 0))}</b>
+                <b class="pr">${fmt(its.reduce((s, x) => s + x.price_jod, 0))}</b>
                 <button style="margin-top:8px" onclick="addKit(${i})">أضف المشروع</button>
               </div>`;
                 }).join("")}
@@ -1244,7 +1230,7 @@
             if (!v) { g.hidden = true; return; }
             const r = find(v).slice(0, 5), ci = catIntent(v);
             g.innerHTML = (ci ? `<div onclick="goSearch($('q').value)"><span>${catOf(ci).icon} قسم ${esc(catOf(ci).name)}</span><span>←</span></div>` : "") +
-                r.map(x => `<div onclick="openP('${x.id}');$('sg').hidden=true"><span>${esc(x.name)}</span><b style="color:var(--ac);">${fmt(x.price_jod)}</b></div>`).join("") +
+                r.map(x => `<div onclick="openP('${x.id}');$('sg').hidden=true"><span>${esc(x.name)}</span><b class="pr">${fmt(x.price_jod)}</b></div>`).join("") +
                 `<div onclick="goSearch($('q').value)"><span>عرض كل النتائج</span><span>←</span></div>`;
             g.hidden = false;
         });
@@ -1286,7 +1272,7 @@
         <div class="pr" style="font-size:22px">${fmt(x.price_jod)}</div>
         <div class="act">
           <button class="n" onclick="hide()">إغلاق</button>
-          ${x.in_stock ? `<button class="add" style="background:var(--ac);color:#fff;border:0;border-radius:10px;padding:12px" onclick="add('${x.id}');hide()">أضف للسلة</button>` : "<button class='n' disabled>غير متوفر</button>"}
+          ${x.in_stock ? `<button class="add" onclick="add('${x.id}');hide()">أضف للسلة</button>` : "<button class='n' disabled>غير متوفر</button>"}
         </div>
       </div>`);
         }
@@ -1580,15 +1566,15 @@
                 totalRow.className = "qt";
                 totalRow.innerHTML = `
           <span style="color:var(--tx)">إجمالي قطع المشروع:</span>
-          <span id="tot_${msgId}" style="color:var(--ac)">0.00 ${S.currency}</span>
+          <span class="pr" id="tot_${msgId}">0.00 ${S.currency}</span>
         `;
                 bomBox.appendChild(totalRow);
 
                 const addBundleBtn = document.createElement("button");
-                addBundleBtn.style.cssText = "background:var(--ac);color:#fff;border:0;border-radius:10px;padding:10px;width:100%;font-weight:700;margin-top:6px;transition:background 0.2s;";
+                addBundleBtn.style.cssText = "background:var(--ac);color:#fff;border:0;border-radius:10px;padding:10px;width:100%;font-weight:700;margin-top:6px;transition:opacity 0.2s;";
                 addBundleBtn.textContent = "🛒 أضف جميع قطع المشروع إلى السلة";
-                addBundleBtn.onmouseover = () => addBundleBtn.style.background = "#1d4ed8";
-                addBundleBtn.onmouseout = () => addBundleBtn.style.background = "var(--ac)";
+                addBundleBtn.onmouseover = () => addBundleBtn.style.opacity = "0.8";
+                addBundleBtn.onmouseout = () => addBundleBtn.style.opacity = "1";
                 addBundleBtn.onclick = () => addBundleToCart(msgId);
                 bomBox.appendChild(addBundleBtn);
 
