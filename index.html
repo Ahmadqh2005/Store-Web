@@ -9,10 +9,8 @@
         content="متجر الكترونياتك (Electronyatk): بوردات، حساسات، ومكونات إلكترونية ومشاريع هندسية. اطلب أونلاين وتوصيل فوري عبر واتساب وانستغرام.">
     <meta name="keywords"
         content="الكترونياتك, electronyatk, elktronyatak, قطع الكترونية, مشاريع هندسية, الأردن, ديود, ديودات, diode, مقاومة, resistor, 1N4007, 1N4148">
-    <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"OnlineStore","name":"الكترونياتك","alternateName":["Electronyatk","Elktronyatak"],"url":"https://elktronyatak.netlify.app/","sameAs":["https://www.instagram.com/elktronyatak"]}
-  </script>
     <style>
+        /* 1. DARK THEME (Default Variables) */
         :root {
             --bg: #0b0e13;
             --card: #141922;
@@ -26,6 +24,17 @@
             padding-bottom: env(safe-area-inset-bottom, 0px);
         }
 
+        /* 2. LIGHT THEME (Active when .light-theme class is on body) */
+        body.light-theme {
+            --bg: #f3f4f6;
+            --card: #ffffff;
+            --tx: #1f2937;
+            --mut: #6b7280;
+            --ac: #2563eb;
+            --y: #f59e0b;
+            --bd: #e5e7eb;
+        }
+
         * {
             box-sizing: border-box;
         }
@@ -36,10 +45,17 @@
 
         body {
             margin: 0;
-            background: var(--bg);
+            background-color: var(--bg);
             color: var(--tx);
             font-family: "Segoe UI", Tahoma, Arial, sans-serif;
             line-height: 1.5;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Light theme dotted background */
+        body.light-theme {
+            background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+            background-size: 20px 20px;
         }
 
         button {
@@ -47,11 +63,18 @@
             cursor: pointer;
         }
 
+        /* Top Header Styling (Dark Mode Default) */
         .top {
-            color: #fff;
+            color: var(--tx);
             padding: 18px 14px 22px;
             background: radial-gradient(circle at 85% 0%, rgba(47, 123, 255, .45), transparent 45%), radial-gradient(circle at 10% 100%, rgba(255, 194, 26, .18), transparent 40%), #0b0e13;
             border-bottom: 1px solid var(--bd);
+        }
+
+        /* Top Header Styling (Light Mode Override) */
+        body.light-theme .top {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
         }
 
         .w {
@@ -74,6 +97,7 @@
             align-items: center;
             gap: 10px;
             cursor: pointer;
+            color: var(--tx);
         }
 
         .lb {
@@ -81,6 +105,7 @@
             height: 38px;
             border-radius: 50%;
             background: var(--ac);
+            color: #ffffff;
             display: grid;
             place-items: center;
             font-size: 20px;
@@ -88,27 +113,48 @@
         }
 
         .ig {
-            color: var(--y);
+            color: var(--ac);
             text-decoration: none;
+            font-weight: 600;
         }
 
+        /* Cart Button (Dark Mode Default) */
         .cb {
             background: var(--y);
             color: #10151c;
             font-weight: 700;
-            border: 0;
+            border: 1px solid transparent;
             border-radius: 12px;
             padding: 8px 14px;
+        }
+
+        /* Cart Button (Light Mode Override) */
+        body.light-theme .cb {
+            background: #ffffff;
+            color: var(--tx);
+            border-color: var(--bd);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Theme Toggle Button */
+        .tb {
+            background: var(--card);
+            color: var(--tx);
+            border: 1px solid var(--bd);
+            border-radius: 12px;
+            padding: 8px 10px;
+            font-size: 16px;
         }
 
         .hero h1 {
             margin: 18px 0 4px;
             font-size: 24px;
+            color: var(--tx);
         }
 
         .hero p {
             margin: 0 0 12px;
-            color: #b9cbd6;
+            color: var(--mut);
             font-size: 14px;
         }
 
@@ -120,10 +166,11 @@
             width: 100%;
             padding: 13px 16px;
             border-radius: 14px;
-            border: 0;
+            border: 1px solid var(--bd);
             font: inherit;
-            background: #fff;
-            color: #10151c;
+            background: var(--card);
+            color: var(--tx);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
         }
 
         #sg {
@@ -135,9 +182,10 @@
             color: var(--tx);
             border-radius: 12px;
             margin-top: 6px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
             z-index: 9;
             overflow: hidden;
+            border: 1px solid var(--bd);
         }
 
         #sg div {
@@ -170,6 +218,13 @@
             padding: 14px 8px;
             text-align: center;
             color: var(--tx);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .ct:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
         .ct b {
@@ -195,6 +250,7 @@
             border: 1px solid var(--bd);
             border-radius: 14px;
             padding: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
         }
 
         .bd b {
@@ -216,6 +272,7 @@
             border-radius: 9px;
             padding: 8px 10px;
             width: 100%;
+            font-weight: 600;
         }
 
         .grid {
@@ -232,6 +289,12 @@
             display: flex;
             flex-direction: column;
             gap: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s;
+        }
+
+        .p:hover {
+            transform: translateY(-2px);
         }
 
         .im {
@@ -259,12 +322,13 @@
 
         .pr {
             font-weight: 800;
-            color: var(--y);
+            color: var(--ac);
         }
 
         .p .add:disabled {
-            background: var(--bd);
+            background: var(--bg);
             color: var(--mut);
+            border: 1px solid var(--bd);
         }
 
         .tl {
@@ -292,6 +356,7 @@
             color: var(--ac);
             padding: 0;
             font-size: 15px;
+            font-weight: 600;
         }
 
         #cf {
@@ -309,12 +374,14 @@
             font-weight: 700;
             display: none;
             z-index: 6;
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
         }
 
         .ov {
             position: fixed;
             inset: 0;
             background: rgba(0, 0, 0, .55);
+            backdrop-filter: blur(3px);
             display: none;
             z-index: 20;
             align-items: flex-end;
@@ -329,6 +396,7 @@
             overflow: auto;
             border-radius: 18px 18px 0 0;
             padding: 16px;
+            box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
         }
 
         .row {
@@ -383,13 +451,14 @@
         }
 
         .g {
-            background: #25a244;
+            background: #10b981;
             color: #fff;
         }
 
         .n {
-            background: var(--bd);
+            background: var(--bg);
             color: var(--tx);
+            border: 1px solid var(--bd);
         }
 
         .pm img {
@@ -401,18 +470,47 @@
             font-size: 80px;
         }
 
+        /* NEW FLOATING CHAT BUTTON */
         .fab {
             position: fixed;
-            right: 14px;
-            bottom: calc(76px + env(safe-area-inset-bottom, 0px));
-            background: var(--y);
-            color: #10151c;
-            border: 0;
-            border-radius: 24px;
-            padding: 11px 16px;
-            font-weight: 700;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, .4);
-            z-index: 7;
+            right: 24px;
+            bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+            background: var(--ac);
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .fab:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 20px -3px rgba(37, 99, 235, 0.4);
+        }
+
+        .fab .dot {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 14px;
+            height: 14px;
+            background: #ef4444;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+        }
+
+        .fab svg {
+            width: 26px;
+            height: 26px;
+            stroke: currentColor;
+            stroke-width: 2;
+            fill: none;
         }
 
         #chat {
@@ -422,6 +520,7 @@
             padding: 0;
         }
 
+        /* Chat Header */
         .ch-h {
             padding: 14px 16px;
             border-bottom: 1px solid var(--bd);
@@ -429,6 +528,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-radius: 18px 18px 0 0;
+        }
+
+        body.light-theme .ch-h {
+            background: var(--ac);
+            color: #ffffff;
+        }
+
+        body.light-theme .ch-h .bk {
+            color: #ffffff !important;
+            opacity: 0.9;
         }
 
         #ms {
@@ -440,43 +550,52 @@
             gap: 10px;
         }
 
+        body.light-theme #ms {
+            background: #f8fafc;
+        }
+
         .m {
             max-width: 94%;
             padding: 10px 12px;
             border-radius: 14px;
             font-size: 14px;
             white-space: pre-wrap;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
         }
 
         .m.u {
-            align-self: flex-start;
+            align-self: flex-end;
             background: var(--ac);
             color: #fff;
+            border-bottom-right-radius: 4px;
         }
 
+        /* Bot Message Base (Dark) */
         .m.b {
-            align-self: flex-end;
+            align-self: flex-start;
             background: #10151d;
             border: 1px solid var(--bd);
+            border-bottom-left-radius: 4px;
             line-height: 1.75;
             font-size: 14px;
             color: var(--tx);
             white-space: normal;
         }
 
-        .m.b p {
-            margin: 0 0 10px 0;
-            color: #dce3ec;
+        /* Bot Message Base (Light Override) */
+        body.light-theme .m.b {
+            background: #ffffff;
         }
 
-        .m.b p:last-child {
-            margin-bottom: 0;
+        .m.b p {
+            margin: 0 0 10px 0;
+            color: var(--mut);
         }
 
         .m.b h4 {
             margin: 14px 0 8px 0;
             font-size: 14.5px;
-            color: #ffffff;
+            color: var(--tx);
             font-weight: 700;
             background: rgba(47, 123, 255, 0.1);
             border-right: 3px solid var(--ac);
@@ -484,8 +603,8 @@
             border-radius: 6px;
         }
 
-        .m.b h4:first-child {
-            margin-top: 2px;
+        body.light-theme .m.b h4 {
+            background: var(--bg);
         }
 
         .m.b ul {
@@ -496,7 +615,7 @@
 
         .m.b li {
             margin-bottom: 6px;
-            color: #dce3ec;
+            color: var(--mut);
         }
 
         .m.b li::marker {
@@ -504,18 +623,18 @@
         }
 
         .m.b b {
-            color: #ffffff;
+            color: var(--tx);
             font-weight: 700;
         }
 
         .m.b code.il {
-            background: var(--card);
+            background: var(--bg);
             border: 1px solid var(--bd);
             padding: 1px 6px;
             border-radius: 6px;
             font-family: Consolas, monospace;
             font-size: 12.5px;
-            color: #7ab0ff;
+            color: #d97706;
             direction: ltr;
             display: inline-block;
         }
@@ -553,8 +672,8 @@
         }
 
         .md-tbl th {
-            background: #19212d;
-            color: #ffffff;
+            background: var(--bg);
+            color: var(--tx);
             font-weight: 700;
         }
 
@@ -578,15 +697,20 @@
             background: var(--card);
             border-bottom: 1px solid var(--bd);
             font-size: 11.5px;
-            color: var(--mut);
+            color: var(--tx);
+            font-weight: 600;
+        }
+
+        body.light-theme .code-hd {
+            background: #e2e8f0;
         }
 
         .code-hd button {
-            background: rgba(47, 123, 255, 0.14);
-            border: 1px solid rgba(47, 123, 255, 0.3);
+            background: var(--bg);
+            border: 1px solid var(--bd);
             border-radius: 6px;
-            padding: 2px 8px;
-            color: #7ab0ff;
+            padding: 4px 10px;
+            color: var(--ac);
             cursor: pointer;
             font-size: 11.5px;
             font-weight: 700;
@@ -609,17 +733,18 @@
             top: 18px;
             left: 50%;
             transform: translateX(-50%);
-            background: #25a244;
+            background: #10b981;
             color: #fff;
             padding: 10px 18px;
             border-radius: 12px;
             font-weight: 700;
             font-size: 13px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, .4);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .15);
             z-index: 99;
             display: none;
         }
 
+        /* Missing items (Dark mode) */
         .missing-box {
             margin-top: 12px;
             padding: 12px 14px;
@@ -627,8 +752,15 @@
             background: rgba(255, 194, 26, 0.08);
             border: 1px solid rgba(255, 194, 26, 0.35);
             border-right: 4px solid var(--y);
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             white-space: normal;
+        }
+
+        /* Missing items (Light mode override) */
+        body.light-theme .missing-box {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-right: 4px solid var(--y);
         }
 
         .missing-title {
@@ -637,7 +769,7 @@
             gap: 6px;
             font-weight: 800;
             font-size: 13px;
-            color: var(--y);
+            color: #d97706;
             margin-bottom: 8px;
         }
 
@@ -649,9 +781,9 @@
         }
 
         .missing-tag {
-            background: #141922;
-            border: 1px solid rgba(255, 194, 26, 0.45);
-            color: #ffffff;
+            background: var(--card);
+            border: 1px solid var(--bd);
+            color: #d97706;
             padding: 4px 10px;
             border-radius: 8px;
             font-size: 12px;
@@ -661,9 +793,13 @@
             gap: 5px;
         }
 
+        body.light-theme .missing-tag {
+            border-color: #fcd34d;
+        }
+
         .missing-note {
             font-size: 12px;
-            color: #c9d4e2;
+            color: var(--mut);
             margin-top: 6px;
             line-height: 1.5;
         }
@@ -696,7 +832,8 @@
         .ql {
             min-width: 64px;
             text-align: left;
-            color: var(--y);
+            color: var(--ac);
+            font-weight: 600;
             font-size: 13px;
         }
 
@@ -712,7 +849,7 @@
             height: 26px;
             border-radius: 8px;
             border: 1px solid var(--bd);
-            background: var(--card);
+            background: var(--bg);
             color: var(--tx);
         }
 
@@ -731,12 +868,17 @@
         }
 
         .chip {
-            background: var(--card);
+            background: var(--bg);
             color: var(--tx);
             border: 1px solid var(--bd);
             border-radius: 16px;
             padding: 6px 12px;
             font-size: 13px;
+            transition: background 0.2s;
+        }
+
+        .chip:hover {
+            background: var(--card);
         }
 
         .ch-f {
@@ -744,25 +886,36 @@
             gap: 8px;
             padding: 10px;
             border-top: 1px solid var(--bd);
+            background: var(--card);
         }
 
         .ch-f input {
             flex: 1;
             padding: 11px;
-            border-radius: 12px;
+            border-radius: 20px;
             border: 1px solid var(--bd);
             background: var(--bg);
             color: var(--tx);
             font: inherit;
         }
 
+        .ch-f input:focus {
+            outline: none;
+            border-color: var(--ac);
+        }
+
         .ch-f button {
-            background: var(--y);
-            color: #10151c;
+            background: var(--ac);
+            color: #ffffff;
             border: 0;
-            border-radius: 12px;
-            padding: 0 16px;
+            border-radius: 20px;
+            padding: 0 20px;
             font-weight: 700;
+            transition: background 0.2s;
+        }
+
+        .ch-f button:hover {
+            background: #1d4ed8;
         }
 
         footer {
@@ -775,6 +928,13 @@
 </head>
 
 <body>
+    <!-- Script to apply theme BEFORE page renders to prevent flickering -->
+    <script>
+        if (localStorage.getItem("elktronyatak_theme") === "light") {
+            document.body.classList.add("light-theme");
+        }
+    </script>
+
     <div class="top">
         <div class="w">
             <div class="hd">
@@ -782,7 +942,10 @@
                     <span class="lb">⚡</span>
                     <span id="sn">الكترونياتك</span>
                 </div>
-                <button class="cb" id="cbt" onclick="openCart()">🛒 <span id="cn">0</span></button>
+                <div style="display: flex; gap: 8px;">
+                    <button class="tb" onclick="toggleTheme()" title="تغيير المظهر">🌓</button>
+                    <button class="cb" id="cbt" onclick="openCart()">🛒 <span id="cn">0</span></button>
+                </div>
             </div>
             <div class="hero">
                 <h1>متجر الكترونياتك — Electronyatk</h1>
@@ -804,17 +967,25 @@
 
     <footer id="ft"></footer>
 
-    <button class="fab" id="fab" onclick="chatOpen()">💬 اسأل الكترونياتك</button>
+    <!-- Beautiful Icon Chat Button -->
+    <button class="fab" id="fab" onclick="chatOpen()" aria-label="Open AI Assistant">
+        <span class="dot"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+        </svg>
+    </button>
 
     <div class="ov" id="ov2">
         <div class="sh" id="chat">
             <div class="ch-h">
-                <span>🔧 <span class="chn">الكترونياتك</span></span>
+                <span>⚡ <span class="chn">الكترونياتك الذكي</span></span>
                 <span style="display:flex;gap:12px;align-items:center">
-                    <button class="bk" onclick="resetChatSession()" style="color:var(--mut);font-size:13px"
-                        title="بدء محادثة جديدة">🔄 محادثة جديدة</button>
-                    <button class="bk" onclick="waGen()" style="color:var(--y);font-size:13px">📲 صاحب المتجر</button>
-                    <button class="bk" onclick="$('ov2').style.display='none'" style="color:var(--tx)">✕</button>
+                    <button class="bk" onclick="resetChatSession()" style="font-size:13px" title="بدء محادثة جديدة">🔄
+                        محادثة جديدة</button>
+                    <button class="bk" onclick="waGen()" style="font-size:13px">📲 صاحب المتجر</button>
+                    <button class="bk" onclick="$('ov2').style.display='none'"
+                        style="font-size:16px; font-weight: bold;">✕</button>
                 </span>
             </div>
             <div id="ms"></div>
@@ -822,7 +993,7 @@
                 <input id="ci" placeholder="اسأل عن قطعة أو مشروع..." autocomplete="off">
                 <button onclick="send()">إرسال</button>
             </div>
-            <div style="padding:0 12px 8px;color:var(--mut);font-size:11px">
+            <div style="padding:0 12px 8px;color:var(--mut);font-size:11px;text-align:center;background:var(--card);">
                 محادثتك خاصة بك ومنفصلة عن أي مستخدم آخر 🔒
             </div>
         </div>
@@ -838,6 +1009,13 @@
 
     <script>
         const $ = id => document.getElementById(id);
+
+        // Theme Toggle Functionality
+        function toggleTheme() {
+            document.body.classList.toggle("light-theme");
+            const isLight = document.body.classList.contains("light-theme");
+            localStorage.setItem("elktronyatak_theme", isLight ? "light" : "dark");
+        }
 
         function showToast(text) {
             const t = $("toast");
@@ -857,7 +1035,6 @@
             document.body.removeChild(ta);
         }
 
-        // 1. Per-User Isolated Session ID (stored in browser localStorage)
         function getOrCreateSessionId() {
             let sid = localStorage.getItem("elktronyatak_session_id");
             if (!sid) {
@@ -868,7 +1045,6 @@
         }
         let SESSION_ID = getOrCreateSessionId();
 
-        // 2. Global Store State (Fetched dynamically from /api/products)
         let S = {
             store_name: "الكترونياتك",
             whatsapp: "962788600458",
@@ -908,11 +1084,10 @@
                 upd();
                 route();
             } catch (err) {
-                $("app").innerHTML = `<div class="sec"><p style="color:#ff5a59">⚠️ تعذر تحميل قاعدة بيانات المنتجات. تأكد من تشغيل السيرفر (uvicorn main:app --reload).</p></div>`;
+                $("app").innerHTML = `<div class="sec"><p style="color:#ef4444">⚠️ تعذر تحميل قاعدة بيانات المنتجات. تأكد من تشغيل السيرفر (uvicorn main:app --reload).</p></div>`;
             }
         }
 
-        // 4. Smart Arabic Search & Synonym Matching
         const SYN = {};
         const Y = (c, w, ...ks) => ks.forEach(k => SYN[nz(k)] = { c, w: nz(w) });
         Y("motors", "محركات", "ماطور", "ماتور", "موتور", "موتر", "محرك", "محركات", "motor", "motors", "مواتير", "مواطير", "دينمو", "موتورات", "ماتورات", "ماطورات", "مواتر", "ماطر");
@@ -990,7 +1165,6 @@
             return r.map((x, i) => [x, i]).sort((a, b) => sc(b[0]) - sc(a[0]) || a[1] - b[1]).map(a => a[0]);
         }
 
-        // 5. Render Product Cards with Automatic Image & Fallback Icon
         function renderImageOrIcon(x) {
             const fallbackIcon = catOf(x.category).icon;
             if (!x.image) return fallbackIcon;
@@ -1048,7 +1222,7 @@
                     return `<div class="bd">
                 <b>${esc(k.name)}</b>
                 <small>${esc(k.description)}</small>
-                <b style="color:var(--y)">${fmt(its.reduce((s, x) => s + x.price_jod, 0))}</b>
+                <b style="color:var(--ac)">${fmt(its.reduce((s, x) => s + x.price_jod, 0))}</b>
                 <button style="margin-top:8px" onclick="addKit(${i})">أضف المشروع</button>
               </div>`;
                 }).join("")}
@@ -1070,7 +1244,7 @@
             if (!v) { g.hidden = true; return; }
             const r = find(v).slice(0, 5), ci = catIntent(v);
             g.innerHTML = (ci ? `<div onclick="goSearch($('q').value)"><span>${catOf(ci).icon} قسم ${esc(catOf(ci).name)}</span><span>←</span></div>` : "") +
-                r.map(x => `<div onclick="openP('${x.id}');$('sg').hidden=true"><span>${esc(x.name)}</span><b>${fmt(x.price_jod)}</b></div>`).join("") +
+                r.map(x => `<div onclick="openP('${x.id}');$('sg').hidden=true"><span>${esc(x.name)}</span><b style="color:var(--ac);">${fmt(x.price_jod)}</b></div>`).join("") +
                 `<div onclick="goSearch($('q').value)"><span>عرض كل النتائج</span><span>←</span></div>`;
             g.hidden = false;
         });
@@ -1106,9 +1280,9 @@
             if (!x) return;
             show(`<div class="pm">
         <div class="im">${renderImageOrIcon(x)}</div>
-        <h2>${esc(x.name)}</h2>
+        <h2 style="color:var(--tx); margin-top:12px">${esc(x.name)}</h2>
         <small>${esc(catOf(x.category).name)}</small>
-        <p>${esc(x.description || "")}</p>
+        <p style="color:var(--mut)">${esc(x.description || "")}</p>
         <div class="pr" style="font-size:22px">${fmt(x.price_jod)}</div>
         <div class="act">
           <button class="n" onclick="hide()">إغلاق</button>
@@ -1132,10 +1306,10 @@
 
         function openCart() {
             const k0 = { nm: $("nm")?.value || "", ad: $("ad")?.value || "", nt: $("nt")?.value || "" };
-            if (!cnt()) { show("<h2>السلة فاضية</h2><p>اختار قطع وارجع 👍</p>"); return; }
-            show(`<h2 style="margin:0">سلتي</h2>` +
-                Object.entries(cart).map(([k, q]) => `<div class="row"><div>${esc(byId(k).name)}<br><small>${fmt(byId(k).price_jod * q)}</small></div><div class="q"><button onclick="ch('${k}',-1)">−</button><span>${q}</span><button onclick="ch('${k}',1)">+</button></div></div>`).join("") +
-                `<h3>المجموع: ${fmt(tot())}</h3>
+            if (!cnt()) { show("<h2 style='color:var(--tx)'>السلة فاضية</h2><p style='color:var(--mut)'>اختار قطع وارجع 👍</p>"); return; }
+            show(`<h2 style="margin:0; color:var(--tx)">سلتي</h2>` +
+                Object.entries(cart).map(([k, q]) => `<div class="row"><div><span style="color:var(--tx)">${esc(byId(k).name)}</span><br><small>${fmt(byId(k).price_jod * q)}</small></div><div class="q"><button onclick="ch('${k}',-1)">−</button><span style="color:var(--tx)">${q}</span><button onclick="ch('${k}',1)">+</button></div></div>`).join("") +
+                `<h3 style="color:var(--tx)">المجموع: ${fmt(tot())}</h3>
         <input id="nm" placeholder="اسمك" value="${esc(k0.nm)}">
         <input id="ad" placeholder="المنطقة / العنوان" value="${esc(k0.ad)}">
         <textarea id="nt" rows="2" placeholder="ملاحظات">${esc(k0.nt)}</textarea>
@@ -1218,7 +1392,7 @@
 
             const loadingDiv = document.createElement("div");
             loadingDiv.className = "m b";
-            loadingDiv.textContent = "⏳ جاري تحليل مشروعك وتجهيز القطع المناسبة...";
+            loadingDiv.textContent = "⏳ جاري التحليل وتجهيز القطع المناسبة...";
             $("ms").appendChild(loadingDiv);
             $("ms").scrollTop = $("ms").scrollHeight;
 
@@ -1236,7 +1410,7 @@
                 loadingDiv.remove();
                 appendBotMessage(data);
             } catch (err) {
-                loadingDiv.textContent = "⚠️ عذراً، تعذر الاتصال بالمساعد الذكي حالياً. يمكنك التواصل مباشرة مع صاحب المتجر عبر زر صاحب المتجر بالأعلى.";
+                loadingDiv.textContent = "⚠️ عذراً، تعذر الاتصال بالمساعد الذكي حالياً. يمكنك التواصل مباشرة مع صاحب المتجر عبر الزر بالأعلى.";
             }
         };
 
@@ -1387,12 +1561,12 @@
                     row.className = "qr";
                     row.innerHTML = `
             <div class="qn">
-              <b>${esc(item.name)}</b>
+              <b style="color:var(--tx);">${esc(item.name)}</b>
               <small>${esc(rec.role_in_project)} · (${fmt(item.price_jod)})</small>
             </div>
             <div class="q">
               <button onclick="updateBomQty('${msgId}', '${rec.id}', -1)">-</button>
-              <span id="qty_${msgId}_${rec.id}">${rec.qty || 1}</span>
+              <span id="qty_${msgId}_${rec.id}" style="color:var(--tx)">${rec.qty || 1}</span>
               <button onclick="updateBomQty('${msgId}', '${rec.id}', 1)">+</button>
             </div>
             <div class="ql" id="sub_${msgId}_${rec.id}">
@@ -1405,14 +1579,16 @@
                 const totalRow = document.createElement("div");
                 totalRow.className = "qt";
                 totalRow.innerHTML = `
-          <span>إجمالي قطع المشروع:</span>
-          <span id="tot_${msgId}" style="color:var(--y)">0.00 ${S.currency}</span>
+          <span style="color:var(--tx)">إجمالي قطع المشروع:</span>
+          <span id="tot_${msgId}" style="color:var(--ac)">0.00 ${S.currency}</span>
         `;
                 bomBox.appendChild(totalRow);
 
                 const addBundleBtn = document.createElement("button");
-                addBundleBtn.style.cssText = "background:var(--ac);color:#fff;border:0;border-radius:10px;padding:10px;width:100%;font-weight:700;margin-top:6px";
+                addBundleBtn.style.cssText = "background:var(--ac);color:#fff;border:0;border-radius:10px;padding:10px;width:100%;font-weight:700;margin-top:6px;transition:background 0.2s;";
                 addBundleBtn.textContent = "🛒 أضف جميع قطع المشروع إلى السلة";
+                addBundleBtn.onmouseover = () => addBundleBtn.style.background = "#1d4ed8";
+                addBundleBtn.onmouseout = () => addBundleBtn.style.background = "var(--ac)";
                 addBundleBtn.onclick = () => addBundleToCart(msgId);
                 bomBox.appendChild(addBundleBtn);
 
@@ -1420,7 +1596,6 @@
                 setTimeout(() => recalcBomTotal(msgId), 0);
             }
 
-            // High-visibility card for missing / external hardware items
             if (data.missing_items && data.missing_items.length > 0) {
                 const missDiv = document.createElement("div");
                 missDiv.className = "missing-box";
@@ -1496,7 +1671,6 @@
             openCart();
         };
 
-        // Start loading store catalog
         initStore();
     </script>
 </body>

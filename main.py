@@ -209,12 +209,11 @@ def chat_with_advisor(req: ChatRequest):
     )
     recent_contents.append(user_msg_content)
 
+    # UPDATED: Only try models that are fast and currently active to prevent timeouts
     models_to_try = [
-        "gemini-3.5-flash-lite",
-        "gemini-flash-lite-latest",
-        "gemini-3.8-flash",
-        "gemini-3.5-flash",
-        "gemini-flash-latest",
+        "gemini-2.0-flash",
+        "gemini-1.5-flash",
+        "gemini-1.5-flash-8b"
     ]
 
     last_error = None
