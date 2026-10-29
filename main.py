@@ -113,7 +113,6 @@ class ChatRequest(BaseModel):
 
 class ResetSessionRequest(BaseModel):
     session_id: str
-
 def build_system_prompt(store_data: dict) -> str:
     # Strip images to save tokens and keep prompt execution fast
     clean_items = [
@@ -148,12 +147,12 @@ def build_system_prompt(store_data: dict) -> str:
   |---|---|---|
 - التنبيهات الكهربائية وحماية المداخل (مثل فرق الجهد 5V و 3.3V) توضع في سطر مستقل تماماً يبدأ بـ:
   ⚠️ **تنبيه هندسي:** [الشرح والحل]
-- عند كتابة كود برمجي، استخدم كود بلوك نقي ومحدد اللغة ```cpp ... ```.
+- يُمنع منعاً باتاً كتابة أو توفير أي أكواد برمجية (No Code Generation). اشرح التوصيل والمنطق فقط.
 
 # 4. INTENT ROUTING
 1. بناء مشروع (Project Build):
    - قسّم المنظومة هندسياً (العقل المتحكم، المشغلات/الدرايفرات، الحساسات، التغذية).
-   - اعرض جدول توصيل الأطراف وكود Arduino IDE بسيط جاهز للنسخ عند الحاجة.
+   - اعرض جدول توصيل الأطراف فقط (لا تقم بإعطاء أي كود برمجي).
 2. المقارنة أو الشرح (Comparison / Technical Q&A):
    - افصل بين القطع بعناوين `### ` مع إيضاح نقاط القوة والمدى التشغيلي لكل منها.
 3. التوافقية وجهود التشغيل (Logic Levels & Power):
