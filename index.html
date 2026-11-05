@@ -37,7 +37,6 @@
             --y: #ffc21a;
             --bd: #232b37;
             background-image: none !important;
-            /* Removes dotted background in dark mode */
         }
 
         * {
@@ -51,7 +50,6 @@
         body {
             margin: 0;
             background-color: var(--bg);
-            /* Dotted background pattern */
             background-image: radial-gradient(#d1d5db 1px, transparent 1px);
             background-size: 20px 20px;
             color: var(--tx);
@@ -73,7 +71,6 @@
             border-bottom: 1px solid var(--bd);
         }
 
-        /* Adjust top bar background for dark mode */
         body.dark-theme .top {
             background: radial-gradient(circle at 85% 0%, rgba(47, 123, 255, .15), transparent 45%), #0b0e13;
         }
@@ -310,7 +307,6 @@
 
         body.dark-theme .pr {
             color: var(--y);
-            /* Back to yellow prices in dark mode */
         }
 
         .p .add:disabled {
@@ -458,13 +454,14 @@
             font-size: 80px;
         }
 
-        /* NEW FLOATING CHAT BUTTON (Match image design) */
+        /* --- UPDATED FLOATING CHAT BUTTON --- */
         .fab {
             position: fixed;
             right: 24px;
             bottom: calc(24px + env(safe-area-inset-bottom, 0px));
-            background: var(--ac);
-            color: #ffffff;
+            /* Dark slate color for light theme to contrast with blue cart bar */
+            background: #dcbc1c;
+            color: #f0eaf1;
             border: none;
             border-radius: 50%;
             width: 56px;
@@ -472,19 +469,29 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 10px 15px -3px rgba(17, 24, 39, 0.3);
             z-index: 10;
-            transition: all 0.3s ease;
+            transition: bottom 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Auto-lift the chat button when the cart bar is visible */
+        body.has-cart .fab {
+            bottom: calc(85px + env(safe-area-inset-bottom, 0px));
         }
 
         body.dark-theme .fab {
             background: var(--y);
             color: #10151c;
+            box-shadow: 0 10px 15px -3px rgba(255, 194, 26, 0.2);
         }
 
         .fab:hover {
             transform: scale(1.05);
-            box-shadow: 0 15px 20px -3px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 15px 20px -3px rgba(17, 24, 39, 0.4);
+        }
+
+        body.dark-theme .fab:hover {
+            box-shadow: 0 15px 20px -3px rgba(255, 194, 26, 0.3);
         }
 
         .fab .dot {
@@ -496,6 +503,10 @@
             background: #ef4444;
             border: 2px solid #ffffff;
             border-radius: 50%;
+        }
+
+        body.dark-theme .fab .dot {
+            border-color: #10151c;
         }
 
         .fab svg {
@@ -920,7 +931,6 @@
                     <span id="sn">الكترونياتك</span>
                 </div>
                 <div style="display: flex; gap: 8px;">
-                    <!-- Theme Toggle Button -->
                     <button class="cb" onclick="toggleTheme()" title="تغيير المظهر">🌓</button>
                     <button class="cb" id="cbt" onclick="openCart()">🛒 <span id="cn">0</span></button>
                 </div>
@@ -985,14 +995,12 @@
     <div class="toast" id="toast"></div>
 
     <script>
-        // --- THEME TOGGLE LOGIC ---
         function toggleTheme() {
             document.body.classList.toggle("dark-theme");
             const isDark = document.body.classList.contains("dark-theme");
             localStorage.setItem("elktronyatak_theme", isDark ? "dark" : "light");
         }
 
-        // Load saved theme when the page opens
         if (localStorage.getItem("elktronyatak_theme") === "dark") {
             document.body.classList.add("dark-theme");
         }
@@ -1017,7 +1025,6 @@
             document.body.removeChild(ta);
         }
 
-        // 1. Per-User Isolated Session ID (stored in browser localStorage)
         function getOrCreateSessionId() {
             let sid = localStorage.getItem("elktronyatak_session_id");
             if (!sid) {
@@ -1028,7 +1035,6 @@
         }
         let SESSION_ID = getOrCreateSessionId();
 
-        // 2. Global Store State (Fetched dynamically from /api/products)
         let S = {
             store_name: "الكترونياتك",
             whatsapp: "962788600458",
@@ -1072,7 +1078,6 @@
             }
         }
 
-        // 4. Smart Arabic Search & Synonym Matching
         const SYN = {};
         const Y = (c, w, ...ks) => ks.forEach(k => SYN[nz(k)] = { c, w: nz(w) });
         Y("motors", "محركات", "ماطور", "ماتور", "موتور", "موتر", "محرك", "محركات", "motor", "motors", "مواتير", "مواطير", "دينمو", "موتورات", "ماتورات", "ماطورات", "مواتر", "ماطر");
@@ -1150,7 +1155,6 @@
             return r.map((x, i) => [x, i]).sort((a, b) => sc(b[0]) - sc(a[0]) || a[1] - b[1]).map(a => a[0]);
         }
 
-        // 5. Render Product Cards with Automatic Image & Fallback Icon
         function renderImageOrIcon(x) {
             const fallbackIcon = catOf(x.category).icon;
             if (!x.image) return fallbackIcon;
@@ -1245,6 +1249,8 @@
         }
         function cnt() { return Object.values(cart).reduce((a, b) => a + b, 0); }
         function tot() { return Object.entries(cart).reduce((s, [k, q]) => s + (byId(k) ? byId(k).price_jod * q : 0), 0); }
+
+        // UPDATED: Controls if the UI considers the cart "active" to prevent button overlap
         function upd() {
             if (S.items.length) {
                 Object.keys(cart).forEach(k => { if (!byId(k)) delete cart[k]; });
@@ -1252,7 +1258,15 @@
             saveCart();
             $("cn").textContent = cnt();
             const b = $("cf");
-            b.style.display = cnt() ? "block" : "none";
+
+            if (cnt() > 0) {
+                b.style.display = "block";
+                document.body.classList.add("has-cart"); // Lifts the chat button up automatically
+            } else {
+                b.style.display = "none";
+                document.body.classList.remove("has-cart"); // Drops the chat button back down
+            }
+
             b.textContent = `🛒 السلة (${cnt()}) — ${fmt(tot())}`;
         }
 
@@ -1290,10 +1304,25 @@
                 `\nالمجموع: ${fmt(tot())}\n\nالاسم: ${$("nm")?.value || ""}\nالعنوان: ${$("ad")?.value || ""}\nملاحظات: ${$("nt")?.value || ""}`;
         }
 
+        // UPDATED: Added header layout with an 'X' button to easily close the cart
         function openCart() {
             const k0 = { nm: $("nm")?.value || "", ad: $("ad")?.value || "", nt: $("nt")?.value || "" };
-            if (!cnt()) { show("<h2 style='color:var(--tx)'>السلة فاضية</h2><p style='color:var(--mut)'>اختار قطع وارجع 👍</p>"); return; }
-            show(`<h2 style="margin:0; color:var(--tx)">سلتي</h2>` +
+            if (!cnt()) {
+                show(`
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                        <h2 style="margin:0; color:var(--tx)">السلة فاضية</h2>
+                        <button class="bk" onclick="hide()" style="font-size:22px; color:var(--mut);">✕</button>
+                    </div>
+                    <p style='color:var(--mut)'>اختار قطع وارجع 👍</p>
+                `);
+                return;
+            }
+            show(`
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                    <h2 style="margin:0; color:var(--tx)">سلتي</h2>
+                    <button class="bk" onclick="hide()" style="font-size:22px; color:var(--mut);">✕</button>
+                </div>
+                ` +
                 Object.entries(cart).map(([k, q]) => `<div class="row"><div><span style="color:var(--tx)">${esc(byId(k).name)}</span><br><small>${fmt(byId(k).price_jod * q)}</small></div><div class="q"><button onclick="ch('${k}',-1)">−</button><span style="color:var(--tx)">${q}</span><button onclick="ch('${k}',1)">+</button></div></div>`).join("") +
                 `<h3 style="color:var(--tx)">المجموع: ${fmt(tot())}</h3>
         <input id="nm" placeholder="اسمك" value="${esc(k0.nm)}">
