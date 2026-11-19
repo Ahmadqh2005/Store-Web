@@ -685,6 +685,60 @@
             "in_stock": true,
             "tags": "مواسع مكثف كيميائي ميكروفاراد 10uf 50v capacitor electrolytic 10 microfarad radial فلترة تنعيم decoupling filtering passive comps",
             "description": "مواسع ألمنيوم كيميائي أسطواني بقطبية محددة (Radial Electrolytic Capacitor) بسعة 10 ميكروفاراد وجهد تشغيلي أقصى 50 فولت. مناسب لدوائر تنعيم وفلترة مزودات الطاقة، إزالة الضوضاء والتموجات (Decoupling)، وتمرير إشارات التردد الصوتي مع حجب التيار المستمر في المشاريع الإلكترونية."
+        },
+        {
+            "id": "pot_b2k",
+            "name": "مقياس جهد أحادي الوصلة B2K (Single Union B2K)",
+            "category": "comps",
+            "price_jod": 0.2,
+            "in_stock": true,
+            "tags": "مقياس جهد مقياس متغير potentiometer b2k 2k single union صوت مستوى الصوت ضبط دوائر مقاومة متغيرة",
+            "description": "مقياس جهد أحادي الوصلة (Single Union) طراز B2K مناسب للتحكم في مستوى الصوت، وضبط الدوائر الإلكترونية، وتطبيقات المعايرة والتعديل."
+        },
+        {
+            "id": "pot_b1k",
+            "name": "مقياس جهد أحادي الوصلة B1K (Single Union B1K)",
+            "category": "comps",
+            "price_jod": 0.2,
+            "in_stock": true,
+            "tags": "مقياس جهد مقياس متغير potentiometer b1k 1k single union صوت مستوى الصوت معالجة اشارة تكييف هواء مقاومة متغيرة",
+            "description": "مقياس جهد أحادي الوصلة (Single Union) طراز B1K للتحكم في مستوى الصوت، ومعالجة الإشارة، وتطبيقات الضبط وتكييف الهواء."
+        },
+        {
+            "id": "pot_b10k",
+            "name": "مقياس جهد أحادي الوصلة B10K (Single Union B10K)",
+            "category": "comps",
+            "price_jod": 0.2,
+            "in_stock": true,
+            "tags": "مقياس جهد مقياس متغير potentiometer b10k 10k single union ضبط مقاومة دوائر الكترونية مقاومة متغيرة اردوينو",
+            "description": "مقياس جهد أحادي الوصلة (Single Union) طراز B10K لضبط المقاومة في الدوائر الإلكترونية، وتطبيقات التحكم والمعايرة."
+        },
+        {
+            "id": "ldr_5mm",
+            "name": "مستشعر ضوئي LDR 5 مم (Photoresistor 5mm)",
+            "category": "comps",
+            "price_jod": 0.1,
+            "in_stock": true,
+            "tags": "ldr 5mm مقاومة ضوئية حساس ضوء مستشعر ضوئي حساسية للضوء photoresistor light sensor اردوينو esp32",
+            "description": "مستشعر ضوئي LDR بقطر 5 مم للتطبيقات الحساسة للضوء، واستشعار شدة الإضاءة، والتحكم التلقائي بالإنارة والمشاريع الإلكترونية."
+        },
+        {
+            "id": "push_button_mini",
+            "name": "مفتاح ضغط صغير الحجم (Mini Push Button)",
+            "category": "comps",
+            "price_jod": 0.03,
+            "in_stock": true,
+            "tags": "مفتاح ضغط زر ضغط push button tactile switch صغير الحجم ميني مفتاح تحكم اردوينو بردبورد",
+            "description": "مفتاح ضغط صغير الحجم (Mini Push Button) مناسب للوحات التجارب (Breadboard)، والدوائر الإلكترونية، ومشاريع التحكم والبرمجة."
+        },
+        {
+            "id": "lcd1602_i2c_blue",
+            "name": "شاشة عرض LCD 1602 I2C (16×2) إضاءة خلفية زرقاء",
+            "category": "mods",
+            "price_jod": 2.5,
+            "in_stock": true,
+            "tags": "lcd 1602 16x2 i2c شاشة عرض شاشة lcd اضاءة زرقاء blue backlight arduino raspberry pi stm32 maker nanopi bpi tinker board iot انترنت الاشياء",
+            "description": "وحدة عرض LCD 1602 (16×2 حرف) بواجهة I2C تسلسلية وإضاءة خلفية زرقاء، متوافقة مع Raspberry Pi وArduino وSTM32 وMaker وNanoPi وBPI وTinker Board ومشاريع إنترنت الأشياء (IoT)."
         }
     ]
 }
