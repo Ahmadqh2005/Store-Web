@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>الكترونياتك | Electronyatk - قطع إلكترونية ومشاريع هندسية</title>
+    <title>الكترونياتك | Electronyatak - قطع إلكترونية ومشاريع هندسية</title>
     <meta name="description"
-        content="متجر الكترونياتك (Electronyatk): بوردات، حساسات، ومكونات إلكترونية ومشاريع هندسية. اطلب أونلاين وتوصيل فوري عبر واتساب وانستغرام.">
+        content="متجر الكترونياتك (Electronyatak): بوردات، حساسات، ومكونات إلكترونية ومشاريع هندسية. اطلب أونلاين وتوصيل فوري عبر واتساب وانستغرام.">
     <meta name="keywords"
-        content="الكترونياتك, electronyatk, elktronyatak, قطع الكترونية, مشاريع هندسية, الأردن, ديود, ديودات, diode, مقاومة, resistor, 1N4007, 1N4148">
+        content="الكترونياتك, electronyatak, elktronyatak, قطع الكترونية, مشاريع هندسية, الأردن, ديود, ديودات, diode, مقاومة, resistor, 1N4007, 1N4148">
     <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"OnlineStore","name":"الكترونياتك","alternateName":["Electronyatk","Elktronyatak"],"url":"https://elktronyatak.netlify.app/","sameAs":["https://www.instagram.com/elktronyatak"]}
   </script>
@@ -1646,7 +1646,13 @@
             }
 
             $("ms").appendChild(botDiv);
-            $("ms").scrollTop = $("ms").scrollHeight;
+            requestAnimationFrame(() => {
+                const container = $("ms");
+                container.scrollTo({
+                    top: botDiv.offsetTop - container.offsetTop - 10,
+                    behavior: "smooth"
+                });
+            });
         }
 
         window.updateBomQty = function (msgId, itemId, delta) {
