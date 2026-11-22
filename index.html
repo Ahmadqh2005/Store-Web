@@ -919,6 +919,73 @@
             font-size: 12px;
             padding: 30px 12px 110px;
         }
+
+        #ann-toggle {
+            display: none;
+        }
+
+        #ann-ov {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            z-index: 50;
+        }
+
+        #ann-toggle:checked+#ann-ov {
+            display: none;
+        }
+
+        .ann-box {
+            position: relative;
+            background: var(--card);
+            border: 1px solid var(--bd);
+            border-radius: 18px;
+            max-width: 440px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .ann-close {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+        }
+
+        .ann-box img {
+            width: 100%;
+            max-height: 75vh;
+            object-fit: contain;
+            display: block;
+            background: var(--bg);
+        }
+
+        .ann-btn {
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 13px;
+            background: var(--ac);
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -991,6 +1058,17 @@
     <div class="ov" id="ov">
         <div class="sh" id="sh"></div>
     </div>
+
+    <!-- === PASTE THE NEW HTML HERE === -->
+    <input type="checkbox" id="ann-toggle">
+    <div id="ann-ov">
+        <div class="ann-box">
+            <label for="ann-toggle" class="ann-close" aria-label="إغلاق">✕</label>
+            <img src="/static/announcements/free_delivery.jpg" alt="إعلان المتجر">
+            <label for="ann-toggle" class="ann-btn">تصفح المتجر ⚡</label>
+        </div>
+    </div>
+    <!-- === END OF NEW HTML === -->
 
     <div class="toast" id="toast"></div>
 
