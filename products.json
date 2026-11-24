@@ -111,19 +111,10 @@
             "description": "لوحة Nano V3.0 بشريحة ATmega328P وCH340G، 5V و16MHz، مع منفذ USB-C وكابل USB لـ Arduino IDE. تدعم PWM وSPI."
         },
         {
-            "id": "esp32_wroom_32",
-            "name": "لوحة تطوير ESP32 DevKit V1 (ESP-WROOM-32)",
-            "category": "boards",
-            "price_jod": 4.15,
-            "in_stock": true,
-            "tags": "esp32 esp 32 esp-wroom-32 devkit v1 واي فاي بلوتوث ارخص esp32 لوحة تطوير انترنت الاشياء iot اردوينو",
-            "description": "لوحة تطوير ESP32 DevKit V1 بوحدة ESP-WROOM-32 ثنائية النواة، تدعم الاتصال اللاسلكي WiFi وBluetooth. الخيار الاقتصاد الأوفر والأعلى كفاءة لمشاريع إنترنت الأشياء (IoT) والأتمتة والروبوتات."
-        },
-        {
             "id": "esp32",
             "name": "ESP32 DevKitC (ESP32-WROOM-32D)",
             "category": "boards",
-            "price_jod": 6.5,
+            "price_jod": 4.15,
             "in_stock": true,
             "tags": "اي اس بي esp32 wifi bluetooth واي فاي",
             "description": "لوحة تطوير ESP32-DevKitC بوحدة ESP32-WROOM-32D (واي فاي وبلوتوث)، متوافقة مع Arduino."
