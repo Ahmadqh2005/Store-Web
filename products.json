@@ -38,6 +38,11 @@
             "id": "power",
             "name": "طاقة وبطاريات",
             "icon": "🔋"
+        },
+        {
+            "id": "tools",
+            "name": "معدات",
+            "icon": "🛠️"
         }
     ],
     "kits": [
@@ -739,6 +744,15 @@
             "in_stock": true,
             "tags": "lcd 1602 16x2 i2c شاشة عرض شاشة lcd اضاءة زرقاء blue backlight arduino raspberry pi stm32 maker nanopi bpi tinker board iot انترنت الاشياء",
             "description": "وحدة عرض LCD 1602 (16×2 حرف) بواجهة I2C تسلسلية وإضاءة خلفية زرقاء، متوافقة مع Raspberry Pi وArduino وSTM32 وMaker وNanoPi وBPI وTinker Board ومشاريع إنترنت الأشياء (IoT)."
+        },
+        {
+            "id": "multimeter_dt830",
+            "name": "جهاز فحص رقمي (Digital Multimeter DT830B)",
+            "category": "tools",
+            "price_jod": 4.5,
+            "in_stock": true,
+            "tags": "ملتميتر افوميتر فحص جهد تيار مقاومة معدات tools multimeter",
+            "description": "جهاز قياس الجهد والتيار والمقاومة وفحص التوصيلية للدارات الإلكترونية."
         }
     ]
 }
