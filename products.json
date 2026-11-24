@@ -111,6 +111,15 @@
             "description": "لوحة Nano V3.0 بشريحة ATmega328P وCH340G، 5V و16MHz، مع منفذ USB-C وكابل USB لـ Arduino IDE. تدعم PWM وSPI."
         },
         {
+            "id": "esp32_wroom_32",
+            "name": "لوحة تطوير ESP32 DevKit V1 (ESP-WROOM-32)",
+            "category": "boards",
+            "price_jod": 4.15,
+            "in_stock": true,
+            "tags": "esp32 esp 32 esp-wroom-32 devkit v1 واي فاي بلوتوث ارخص esp32 لوحة تطوير انترنت الاشياء iot اردوينو",
+            "description": "لوحة تطوير ESP32 DevKit V1 بوحدة ESP-WROOM-32 ثنائية النواة، تدعم الاتصال اللاسلكي WiFi وBluetooth. الخيار الاقتصاد الأوفر والأعلى كفاءة لمشاريع إنترنت الأشياء (IoT) والأتمتة والروبوتات."
+        },
+        {
             "id": "esp32",
             "name": "ESP32 DevKitC (ESP32-WROOM-32D)",
             "category": "boards",
@@ -199,6 +208,24 @@
             "in_stock": true,
             "tags": "hc-sr04 hcsr04 ultrasonic حساس مسافة حامل حساس براكيت bracket سيارة ذكية روبوت esp32 raspberry pi stm32",
             "description": "مستشعر مسافة بالموجات فوق الصوتية HC-SR04 مرفق معه حامل (براكيت) عملي وثابت، مخصص للسيارات الذكية، أذرع الروبوت، القوارب، ونماذج الطائرات. متوافق مع ESP32 وRaspberry Pi وSTM32 وArduino."
+        },
+        {
+            "id": "soil_moisture_sensor_lm393",
+            "name": "حساس كشف رطوبة التربة LM393 (3.3V–5V Soil Moisture Sensor)",
+            "category": "sensors",
+            "price_jod": 1.5,
+            "in_stock": true,
+            "tags": "soil moisture sensor lm393 حساس رطوبة التربة مستشعر رطوبة تربة قياس رطوبة مقياس رطوبة نظام ري اوتوماتيكي ري تلقائي arduino روبوت سيارة ذكية 3.3v 5v",
+            "description": "حساس كشف ودراسة رطوبة التربة بمقارن LM393 يعمل بجهد 3.3V–5V. يمتلك مخرجين ديجيتال D0 وتناظري A0 لضبط مستوى الرطوبة المطلوب، مثالي لنظام الري الأوتوماتيكي ومشاريع الأردوينو الذكية."
+        },
+        {
+            "id": "vl53l0x_tof_sensor",
+            "name": "حساس قياس المسافة والمدى بتقنية زمن الطيران VL53L0X ToF (GY-VL53L0XV2 I2C)",
+            "category": "sensors",
+            "price_jod": 2.25,
+            "in_stock": true,
+            "tags": "vl53l0x gy-vl53l0xv2 tof time of flight حساس مسافة ليزر قياس المدى زمن الطيران 940nm i2c iic مستشعر مسافة دقيق 2.8v 5v",
+            "description": "مستشعر قياس المسافة عالي الدقة VL53L0X بتقنية زمن الطيران (Time-of-Flight) بطول موجي 940 نانومتر، يعمل بجهد 2.8V–5V مع واجهة اتصال I2C. يمنح قياسات مسافة دقيقة وموثوقة بغض النظر عن لون الهدف أو انعكاسيته."
         },
         {
             "id": "l298n",
@@ -546,7 +573,7 @@
             "id": "water_pump_usb_5v",
             "name": "مضخة ماء غاطسة صامتة 3V–5V بمنفذ USB (Silent Submersible Water Pump)",
             "category": "motors",
-            "price_jod": 0,
+            "price_jod": 3.0,
             "in_stock": true,
             "tags": "water pump مضخة ماء غاطسة صامتة usb 3v 5v موزع مياه شاحن هاتف مضخة صغيرة هادئة مشاريع",
             "description": "مضخة ماء غاطسة صغيرة منخفضة الضوضاء تعمل بجهد 3V–5V عبر منفذ USB مع تدفق مناسب وأداء مستقر. متوافقة مع شواحن الهواتف ومنافذ USB، ومناسبة لموزعات المياه الصغيرة والاستخدام المكتبي والمنزلي."
